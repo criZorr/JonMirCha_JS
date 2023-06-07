@@ -65,17 +65,17 @@
 
             //cadenas de texto (strings)
             let nameS = "Christopher"
-            let surname = "Morales"
+            let surnameS = "Morales"
             let formal = new String("Largo")
             let lorem = "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-            console.log(nameS, surname, formal)
+            console.log(nameS, surnameS, formal)
             console.log(
                 nameS.length,
-                surname.length,
+                surnameS.length,
                 formal.length,
                 nameS.toUpperCase(),
-                surname.toLowerCase(),
+                surnameS.toLowerCase(),
                 lorem.includes("dolor"),
                 lorem.includes("Christopher"),
                 lorem,
@@ -84,6 +84,36 @@
                 lorem.split(",")
             )
 
+            //Características de las strings
+
+                //Concatenación
+            let saludo = "Hola mi nombre es" + " " + nameS + " " + surnameS + "."
+            console.log(saludo)
+
+                //Interpolación de variables
+                    //Template String
+            let saludo2 = `Hola mi nombre es ${nameS} ${surnameS}.`
+            console.log(saludo2)
+
+            let ul = "<ul><li>Verano</li><li>Primavera</li><li>Otoño</li><li>Invierno</li></ul>"
+            console.log(ul)
+
+            let ul2 = `
+            <ul>
+                <li>Verano</li>
+                <li>Primavera</li>
+                <li>Otoño</li>
+                <li>Invierno</li>
+            </ul>`
+            console.log(ul2)
+
+            let ul3 = "<ul>"
+                ul3 += "<li>Verano</li>"
+                ul3 += "<li>Primavera</li>"
+                ul3 += "<li>Otoño</li>"
+                ul3 += "<li>Invierno</li>"
+            ul3 += "</ul>"
+            console.log(ul3)
         </script>
     </body>
 </html>
