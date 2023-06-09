@@ -154,6 +154,53 @@
             //NaN -> Not a Number
             let noEsUnNumero = "hola" * 3.7
             console.log(noEsUnNumero);
+            
+            //Función declarada
+            function estoEsUnaFuncion() {
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+            }
+
+            //Invocación de función
+            estoEsUnaFuncion();
+
+            function unaFuncionQueDevuelveValor() {
+                console.log("Uno");
+                return 19;
+                console.log("Dos");
+                console.log("Tres");
+                return "La función ha retornado una cadena de texto"    
+            }
+
+            let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+            console.log(valorDeFuncion);
+
+            function saludar(nombre = "Desconocido", edad = 0) {
+                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+            }
+
+            saludar("criZorr", 23);
+            saludar();
+
+            //Funciones declaradas VS funciones expresadas
+
+            funcionDeclarada();
+            
+            function funcionDeclarada() {
+                console.log("Esto es una función declarada, puede invocarse en cualquier parte del código, incluso antes de que la función sea declarada");
+            }
+
+            funcionDeclarada();
+            //-----
+            funcionExpresada();
+
+            const funcionExpresada = function () {
+                console.log("Esto es una función expresada, es decir una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá...");                
+            }
+
+            funcionExpresada();
 
         </script>
     </body>
