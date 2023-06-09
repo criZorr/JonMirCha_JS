@@ -194,13 +194,51 @@
 
             funcionDeclarada();
             //-----
-            funcionExpresada();
+            //funcionExpresada();
 
             const funcionExpresada = function () {
                 console.log("Esto es una función expresada, es decir una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá...");                
             }
 
             funcionExpresada();
+
+            //Arreglos - Arrays
+
+            const arrayA = [];
+            const arrayB = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+            console.log(arrayA);
+            console.log(arrayB);
+            console.log(arrayB.length);
+            console.log(arrayB[2]);
+            console.log(arrayB[0]);
+            console.log(arrayB[3][2]);
+            console.log(arrayB[3][3][2]);
+
+            const arrayC = Array.of("X", "Y", "Z", 9, 8, 7)
+            console.log(arrayC);
+
+            const arrayD = Array(100).fill(false);
+            console.log(arrayD);
+
+            const arrayE = new Array();
+            console.log(arrayE);
+
+            const arrayF = new Array(1, 2, 3, true, false);
+            console.log(arrayF);
+
+            const arrayColores = ["Rojo", "Verde", "Azul"];
+            console.log(arrayColores);
+
+            arrayColores.push("Negro"); //agrega al final
+            console.log(arrayColores);
+
+            arrayColores.pop();  //Quita el del final
+            console.log(arrayColores);
+
+            arrayColores.forEach(function(el, index){
+                console.log(`<li id="${index}">${el}</li>`);
+
+            });
 
         </script>
     </body>
