@@ -283,6 +283,62 @@
             console.log(Object.keys(criZorr));
             console.log(Object.values(criZorr));
             console.log(criZorr.hasOwnProperty("nombre"));
+            console.log(criZorr.hasOwnProperty("nacimiento"));
+
+            //Tipos de operadores
+
+            //Aritméticos
+
+            let operadorA = 5 + (5 - 10) * 3;
+            let modulo = 5%2;
+
+            console.log(operadorA);
+            console.log(modulo);
+
+            //Relacionales
+
+            console.log(8 > 9);
+            console.log(9 > 8);
+            console.log(8 >= 9);
+            console.log(9 >= 8);
+            console.log(7 < 7);
+            console.log(7 <= 7);
+
+            /*
+                = Asignación de variable
+                == Comparación de variables
+                === Comparación del tipo de dato y de valor
+            */
+
+            console.log(7 == 7);
+            console.log("7" == 7);
+            console.log("7" === 7);
+
+            //Operadores de incremento y decremento
+            let incremento = 1;
+            // incremento = incremento + 2;
+            incremento += 3;
+            console.log(incremento);
+
+            //operador unario
+            incremento ++;
+            console.log(incremento);
+
+            ++incremento; //Primero se aumenta
+            console.log(incremento);
+
+            /*Operadores lógicos
+                ! - Not
+                || - Or
+                && - And
+            */
+
+            console.log(!true);
+            console.log(!false);
+
+            console.log(true || false);
+            console.log(true && false);
+            console.log(true && true);
 
         </script>
     </body>
