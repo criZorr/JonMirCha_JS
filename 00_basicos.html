@@ -408,6 +408,63 @@
                     break;
             }
 
+            //Bucles
+
+            let contador = 0;
+
+            while (contador < 10) {
+                console.log("While " + contador);
+                contador++;
+            }
+
+            contador = 0;
+
+            do {
+                console.log("Do While " + contador);
+                contador++;
+            } while(contador < 10);
+
+            contador = 0;
+
+            // for (inicializacion de la variable; condición; decremento o incremento){
+            //     lo que se va a ejecutar
+            // }
+            
+            //FOR
+            for (let index = 0; index < 10; index++){
+                console.log("For " + index);
+            }
+
+            let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+            for (let i = 0; i < numeros.length; i++){
+                console.log(numeros[i]);
+            }
+
+            //FOR IN
+
+            const criZorr2 = {
+                nombre: "Christopher",
+                apellido: "Morales",
+                edad: 23
+            } 
+
+            console.log(criZorr2["nombre"]);
+
+            for (const propiedad in criZorr2) {
+                console.log(`key: ${propiedad}, Value: ${criZorr2[propiedad]}`);
+            }
+
+            for (const elemento of numeros) {
+                console.log(elemento);                
+            }
+
+            let cadena = "Hola JavaScript"
+
+            for (const caracter of cadena) {
+                console.log(caracter);
+            }
+
         </script>
     </body>
 </html>
