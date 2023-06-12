@@ -240,6 +240,50 @@
 
             });
 
+            //Objetos
+            // Importante trabajar con constantes, para no cambiar su valor
+
+            const ObjB = {
+
+            }
+
+            const ObjC = new Object();
+            
+            /*  Variables: Atributos
+                Propiedades y funciones: Métodos */
+
+            const criZorr = {
+                nombre: "Christopher",
+                apellido: "Morales",
+                edad: 23,
+                pasatiempos: ["comer", "escuchar música", "messi"],
+                soltero: false,
+                contacto: {
+                    email: "christophermjk@gmail.com",
+                    twitter: "@criZorr",
+                    movil: "0982423424"
+                },
+                saludar: function(){
+                    console.log("Hola guapo ;)");
+                },
+                decirMiNombre: function(){
+                    console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en Twitter.`);
+                }
+            }
+
+            console.log(criZorr);
+            console.log(criZorr["nombre"]);
+            console.log(criZorr.apellido);
+            console.log(criZorr.pasatiempos[1]);
+            console.log(criZorr.contacto);
+            console.log(criZorr.contacto.twitter);
+            criZorr.saludar();
+            criZorr.decirMiNombre();
+
+            console.log(Object.keys(criZorr));
+            console.log(Object.values(criZorr));
+            console.log(criZorr.hasOwnProperty("nombre"));
+
         </script>
     </body>
 </html>
