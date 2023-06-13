@@ -731,8 +731,55 @@
             Kirara.saludar();
             Kirara.sonar();
 
-            
+            //--------------------------------------------------
+            //Clases y Herencia
 
+            class AnimalCl{
+                // Método especial que se ejecuta en el momento de instanciar la clase
+                constructor(nombre, genero){
+                    this.nombre = nombre;
+                    this.genero = genero;
+                }
+                //Métodos
+                sonar (){
+                console.log("Hago sonidos porque estoy vivo");
+                }
+
+                saludar (){
+                console.log(`Hola, me llamo ${this.nombre}.`);
+                }
+
+            }
+
+            class Zorro extends AnimalCl{
+                constructor(nombre, genero, tamanio){
+                    //super() llama el constructor de la clase padre
+                    super(nombre, genero);
+                    this.tamanio = tamanio
+                }
+
+                sonar(){
+                    console.log("Soy un zorro, *sonidos de zorro*");
+                }
+
+                ladrar(){
+                    console.log("*sonidos de zorro intensificados*");
+                }
+            }
+
+            const yae = new Zorro("Yae", "mujer", "grande")
+            const oz = new AnimalCl("Oz", "hombre")
+
+            console.log(yae);
+            yae.saludar();
+            yae.sonar();
+            yae.ladrar();
+
+            console.log(oz);
+            oz.saludar();
+            oz.sonar();
+
+        
         </script>
     </body>
 </html>
