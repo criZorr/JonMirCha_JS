@@ -801,6 +801,84 @@
             yae.setRaza = "kitsune";
             console.log(yae.getRaza);
 
+            // ---------------------------
+            // Consola
+
+            console.log(console);
+            console.error("Esto es un error.");
+            console.warn("Esto es una alerta");
+            console.info("Esto es un mensaje informativo");
+            console.log("Registro de lo que ha pasafo en nuestra aplicación");
+
+            let nombreCons = "Christopher",
+            apellidoCons = "Morales",
+            edadCons = 23;
+
+            console.log(nombreCons);
+            console.log(apellidoCons);
+
+            console.log(nombreCons, apellidoCons, edadCons);
+
+            console.log(`Hola, mi nombre es ${nombreCons} ${apellidoCons} y tengo ${edadCons} años.`);
+
+            console.log(`Hola, mi nombre es %s %s y tengo %d años.`, nombreCons, apellidoCons, edadCons);
+
+            //console.clear();
+
+            console.log(window);
+            console.log(document);
+
+            console.dir(window);
+            console.dir(document);
+
+            console.group("Cursos de @jonmircha en Youtube")
+            console.log("Curso de JavaScript");
+            console.log("Curso de Node.js");
+            console.log("Curso de PWAs");
+            console.log("Curso de FlexBox");
+            console.log("Curso de Diseño y Programación Web");
+            console.groupEnd();
+
+            console.log(console);
+            console.table(Object.entries(console));
+
+            const numerosCons = [1, 2, 3, 4, 5]
+
+            const vocalesCons = ["a", "e", "i", "o", "u"]
+
+            console.table(numerosCons);
+            console.table(vocalesCons);
+
+            const gatoCons = {
+                nombre: "Misty",
+                raza: "Sí",
+                color: "Blanco naranjoso"
+            }
+
+            console.table(gatoCons);
+
+            console.time("Cuánto tarda mi código")
+            const arreglo = Array(1000000);
+
+            for (let i = 0; i < arreglo.length; i++) {
+                arreglo[i] = i;
+                
+            }
+
+            console.timeEnd("Cuánto tarda mi código")
+
+            for (let i = 0; i < 100; i++) {
+                console.count("código for");
+                console.log(i);
+            }
+
+            let x = 3;
+            let y = 2;
+
+            let pruebaXY = "Se espera que X siempre sea mayor que Y";
+
+            console.assert(x < y, (x, y, pruebaXY));
+            
 
         </script>
     </body>
