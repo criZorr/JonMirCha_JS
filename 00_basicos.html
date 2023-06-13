@@ -698,14 +698,40 @@
                 console.log(`Hola, me llamo ${this.nombre}.`);
             }
 
-            const Kirara = new Animal("Kirara", "mujer")
-            const Gorou = new Animal("Gorou", "hombre")
+            //Herencia prototípica
+            function Perro(nombre, genero, tamanio){
+                this.super = Animal;
+                this.super(nombre, genero);
+                this.tamanio = tamanio;
+            }
+            
+            //Perro está heredando de Animal
+            Perro.prototype = new Animal();
+            Perro.prototype.constructor = Perro;
+
+            //Sobre escritura de métodos del prototipo en el hijo
+            Perro.prototype.sonar = function(){
+                console.log("Soy un perro. *Ladridos*");
+            }
+
+            Perro.prototype.ladrar = function(){
+                console.log("*ladridos intensos*");
+            }
+
+            const Kirara = new Animal("Kirara", "mujer");
+            const Gorou = new Perro("Gorou", "hombre", "mediano");
 
             console.log(Kirara);
             console.log(Gorou);
 
-            Kirara.saludar();
             Gorou.saludar();
+            Gorou.sonar();
+            Gorou.ladrar()
+
+            Kirara.saludar();
+            Kirara.sonar();
+
+            
 
         </script>
     </body>
