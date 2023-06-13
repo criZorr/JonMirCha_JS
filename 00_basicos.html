@@ -533,6 +533,33 @@
 
             console.log(nombreDes, apellidoDes, edadDes);
 
+            //Objetos literales
+
+            let nombreOL = "criZorr", edadOL = 23;
+
+            const mascota = {
+                nombre: nombreOL,
+                edad: edadOL,
+                saludar: function(){
+                    console.log("Hola guapote ;)");
+                }
+            };
+
+            console.log(mascota);
+            mascota.saludar();
+
+            const pet = {
+                nombreOL,
+                edadOL,
+                raza: "NaN",
+                saludar(){
+                    console.log("Hola guapote 2 ;)");
+                }
+            }
+
+            console.log(pet);
+            pet.saludar();
+
         </script>
     </body>
 </html>
