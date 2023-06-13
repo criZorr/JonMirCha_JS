@@ -507,6 +507,32 @@
                 console.log(numerosNuevos[i]);
             }
 
+            //Sin destructuración
+
+            const numerosDestructuracion = [1, 2, 3];
+
+            let uno = numerosDestructuracion[0];
+            let dos = numerosDestructuracion[1];
+            let tres = numerosDestructuracion[2];
+
+            console.log(uno, dos, tres);
+
+            //Con estructuración
+
+            const [one, two, three] = numerosDestructuracion;
+
+            console.log(one, two, three);
+
+            const persona ={
+                nombreDes: "Christopher",
+                apellidoDes: "Morales",
+                edadDes: 23
+            };
+
+            let {nombreDes, apellidoDes, edadDes} = persona;
+
+            console.log(nombreDes, apellidoDes, edadDes);
+
         </script>
     </body>
 </html>
