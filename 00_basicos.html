@@ -591,6 +591,61 @@
             const arr3 = [...arr1, ...arr2]
             console.log(arr3);
 
+            //Arrow functions
+
+            const saludarAF = () => console.log("Hola");
+            saludarAF();
+
+            const saludarAF2 = nombre => console.log(`Hola ${nombre}.`);
+            saludarAF2("Christopher");
+
+            //Es un return implicito
+
+            const sumarAF = function (a, b) {
+                return a + b;
+            }
+            console.log(sumarAF(1, 2));
+
+            const sumarAF2 = (a, b) => a + b;
+            console.log(sumarAF2(1, 2));
+
+            const funcionDeVariasLineas = () => {
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+            }
+            funcionDeVariasLineas();
+
+            const numerosAF = [1, 2, 3, 4, 5];
+
+            numerosAF.forEach((el, index) => console.log(`${el} está en la posición ${index}.`));
+
+            function Gato() {
+                console.log(this);
+            }
+
+            Gato();
+
+            /* No hacer
+            
+                maullar: function(){
+                        console.log(this);
+                    }
+                
+                maullar: () => {
+                        console.log(this);
+                    }
+            */
+
+            const gato2 = {
+                nombre: "Misty",
+                maullar(){
+                    console.log(this);
+                }
+            }
+
+            gato2.maullar();
+
         </script>
     </body>
 </html>
