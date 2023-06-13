@@ -755,7 +755,8 @@
                 constructor(nombre, genero, tamanio){
                     //super() llama el constructor de la clase padre
                     super(nombre, genero);
-                    this.tamanio = tamanio
+                    this.tamanio = tamanio;
+                    this.raza = null;
                 }
 
                 sonar(){
@@ -765,7 +766,24 @@
                 ladrar(){
                     console.log("*sonidos de zorro intensificados*");
                 }
+
+                // Método estático: se puede ejecutar sin instanciar la clase (pasar valores, creo)
+                static queEres() {
+                    console.log("Los zorros se han caracterizado por se astutos y bonitos.");
+                }
+
+                //Setters y Getters: Permiten establecer y obtener los valores de atributos de nuestra clase
+                get getRaza(){
+                    return this.raza;
+                }
+
+                set setRaza(raza){
+                    this.raza = raza;
+                }
+
             }
+
+            Zorro.queEres();
 
             const yae = new Zorro("Yae", "mujer", "grande")
             const oz = new AnimalCl("Oz", "hombre")
@@ -779,7 +797,11 @@
             oz.saludar();
             oz.sonar();
 
-        
+            console.log(yae.getRaza);
+            yae.setRaza = "kitsune";
+            console.log(yae.getRaza);
+
+
         </script>
     </body>
 </html>
