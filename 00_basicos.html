@@ -976,9 +976,9 @@
 
             console.groupEnd();
 
-            //------------------------------------------------//
+            //-----------------------------------------------//
             //Date
-            console.groupCollapsed("Date");
+        {console.groupCollapsed("23 - Objeto Date");
 
             console.log(Date());
             
@@ -1022,14 +1022,38 @@
             let cumpleChristopher = new Date(2000,1,25);
             console.log(cumpleChristopher);
 
-            console.groupEnd();
+        console.groupEnd();}
 
             //-----------------------------------------------//
-            //
-            console.group("");
+            //Objeto Math
+        {console.group("24 - Objeto Math");
 
-            
-            console.groupEnd();
+            console.log(Math);
+            console.log(Math.PI);
+            console.log(Math.abs(-7.8));
+            //Redondeo siempre hacia arriba
+            console.log(Math.ceil(7.8));
+            //Redondeo siempre hacia abajo
+            console.log(Math.floor(7.8));
+            //Redondeo típico
+            console.log(Math.round(7.4));
+            console.log(Math.round(7.8));
+            //Raiz
+            console.log(Math.sqrt(81));
+            //Potencia
+            console.log(Math.pow(2, 5));
+            //Indicador de negativo o positivo
+            console.log(Math.sign(-5));
+            console.log(Math.sign(5));
+            //Valor aleatorio entre 0 y 1
+            console.log(Math.random());
+            //Aleatorio entre 0 - 1000
+            console.log(Math.random() * 1000);
+            //Con redondeo
+            console.log(Math.round(Math.random() * 1000));
+
+
+        console.groupEnd();}
         </script>
     </body>
 </html>
