@@ -1178,8 +1178,25 @@
             }
 
             //-----------------------------------------------//
-            //
+            //Funciones Anónimas Autoejecutable (IIFE)
+            {
+                console.groupCollapsed("28 - Funciones Anónimas Autoejecutable (IIFE)");
 
+                (function () {
+                    console.log("Mi primera IIFE");
+                })();
+
+                (function (d, w, c) {
+                    console.log("Mi segunda IIFE");
+                    console.log(d);
+                    console.log(w);
+                    c.log("Este es un console.log()")
+                })(document, window, console);
+
+                console.groupEnd();
+            }
+
+            //--------------------------------------------------//
 
         </script>
     </body>
