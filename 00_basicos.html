@@ -9,7 +9,7 @@
     <body>
         <h1>Fundamentos JavaScript</h1>
         <script>
-            console.groupCollapsed("01 - Primera Clase");
+        {console.groupCollapsed("01 - Primera Clase");
 
             var hola = "Hola JavaScript"
             let hello = "Hello JavaScript"
@@ -66,11 +66,11 @@
             console.log(object)
             console.log(colores)
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //------------------------------------------//
+            //-------------------------------------------------//
             //cadenas de texto (strings)
-            console.groupCollapsed("02 - Strings");
+        {console.groupCollapsed("02 - Strings");
 
             let nameS = "Christopher"
             let surnameS = "Morales"
@@ -92,12 +92,11 @@
                 lorem.split(",")
             )
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //--------------------------------------------------//
+            //-------------------------------------------------//
             //Características de las strings
-
-            console.groupCollapsed("03 - Características de las strings");
+        {console.groupCollapsed("03 - Características de las strings");
 
                 //Concatenación
             let saludo = "Hola mi nombre es" + " " + nameS + " " + surnameS + "."
@@ -128,11 +127,11 @@
             ul3 += "</ul>"
             console.log(ul3)
 
-            console.groupEnd();
+        console.groupEnd();}
             
-            //------------------------------------//
+            //-------------------------------------------------//
             //Números
-            console.groupCollapsed("04 - Números");
+        {console.groupCollapsed("04 - Números");
 
             let a = 2
             let b = new Number(1)
@@ -149,11 +148,11 @@
             console.log(c + parseInt(d));
             console.log(c + parseFloat(d));
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //---------------------------------------//
+            //-------------------------------------------------//
             //Booleanos
-            console.groupCollapsed("05 - Booleanos");
+        {console.groupCollapsed("05 - Booleanos");
 
             let verdadero = true;
             let falso = false;
@@ -166,11 +165,11 @@
             console.log(Boolean(""));
             console.log(Boolean(" "));
 
-            console.groupEnd();
+        console.groupEnd();}
             
-            //-------------------------------------//
+            //-------------------------------------------------//
             // Undefined, null y NaN
-            console.groupCollapsed("06 - Undefined, null y NaN");
+        {console.groupCollapsed("06 - Undefined, null y NaN");
 
             let indefinida
             console.log(indefinida)
@@ -182,11 +181,11 @@
             let noEsUnNumero = "hola" * 3.7
             console.log(noEsUnNumero);
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //---------------------------------------//
+            //-------------------------------------------------//
             //Funciones
-            console.groupCollapsed("07 - Funciones");
+        {console.groupCollapsed("07 - Funciones");
 
             //Función declarada
             function estoEsUnaFuncion() {
@@ -235,11 +234,11 @@
 
             funcionExpresada();
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //----------------------------------------//
+            //-------------------------------------------------//
             //Arreglos - Arrays
-            console.groupCollapsed("08 - Arrays");
+        {console.groupCollapsed("08 - Arrays");
 
             const arrayA = [];
             const arrayB = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
@@ -277,11 +276,11 @@
 
             });
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //-----------------------------------------//
+            //-------------------------------------------------//
             //Objetos
-            console.groupCollapsed("09 - Objetos");
+        {console.groupCollapsed("09 - Objetos");
 
             // Importante trabajar con constantes, para no cambiar su valor
 
@@ -327,11 +326,11 @@
             console.log(criZorr.hasOwnProperty("nombre"));
             console.log(criZorr.hasOwnProperty("nacimiento"));
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //------------------------------------------------//
+            //-------------------------------------------------//
             //Tipos de operadores
-            console.groupCollapsed("10 - Operadores");
+        {console.groupCollapsed("10 - Operadores");
 
             //Aritméticos
 
@@ -386,11 +385,11 @@
             console.log(true && false);
             console.log(true && true);
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //------------------------------------------------------//
+            //-------------------------------------------------//
             //Estructuras de control
-            console.groupCollapsed("11 - Estructuras de control (If, Switch y Operador ternario)");
+        {console.groupCollapsed("11 - Estructuras de control (If, Switch y Operador ternario)");
 
             let edad = 17;
 
@@ -458,11 +457,11 @@
                     break;
             }
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //----------------------------------------//
+            //-------------------------------------------------//
             //Bucles
-            console.groupCollapsed("12 - Bucles");
+        {console.groupCollapsed("12 - Bucles");
 
             let contador = 0;
 
@@ -519,11 +518,11 @@
                 console.log(caracter);
             }
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //-----------------------------------------//
+            //-------------------------------------------------//
             //Manejo de errores
-            console.groupCollapsed("13 - Manejo de errores");
+        {console.groupCollapsed("13 - Manejo de errores");
 
             try {
                 console.log("En el try se agrega el código a evaluar");
@@ -547,11 +546,11 @@
                 console.log(`Se produjo el siguiente error: ${error}`);
             }
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //-----------------------------------------------------//
+            //-------------------------------------------------//
             //Break & Continue
-            console.groupCollapsed("14 - Break & Continue");
+        {console.groupCollapsed("14 - Break & Continue");
 
             const numerosNuevos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -569,11 +568,11 @@
                 console.log(numerosNuevos[i]);
             }
             
-            console.groupEnd();
+        console.groupEnd();}
 
-            //-----------------------------------//
+            //-------------------------------------------------//
             //Destructuración
-            console.groupCollapsed("15 - Destructuración");
+        {console.groupCollapsed("15 - Destructuración");
 
             //Sin destructuración
 
@@ -601,11 +600,11 @@
 
             console.log(nombreDes, apellidoDes, edadDes);
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //--------------------------------------------------//
+            //-------------------------------------------------//
             //Objetos literales
-            console.groupCollapsed("16 - Objetos literales");
+        {console.groupCollapsed("16 - Objetos literales");
 
             let nombreOL = "criZorr", edadOL = 23;
 
@@ -632,11 +631,11 @@
             console.log(pet);
             pet.saludar();
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //----------------------------------------------------//
+            //-------------------------------------------------//
             //Parámetros REST
-            console.groupCollapsed("17 - Parametro REST y Operador Spread");
+        {console.groupCollapsed("17 - Parametro REST y Operador Spread");
 
             function sumar (a, b, ...c){
                 let resultado = a + b;
@@ -667,11 +666,11 @@
             const arr3 = [...arr1, ...arr2]
             console.log(arr3);
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //--------------------------------------------------------------//
+            //-------------------------------------------------//
             //Arrow functions
-            console.groupCollapsed("18 - Arrow functions");
+        {console.groupCollapsed("18 - Arrow functions");
 
             const saludarAF = () => console.log("Hola");
             saludarAF();
@@ -726,11 +725,11 @@
 
             gato2.maullar();
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //---------------------------------------------------------
+            //-------------------------------------------------//
             //Prototipos
-            console.groupCollapsed("19 - Prototipos");
+        {console.groupCollapsed("19 - Prototipos");
 
             // Clases - Modelo a seguir
             // Objetos - Es una instancia de una clase
@@ -782,11 +781,11 @@
                 console.log(`Hola, me llamo ${this.nombre}.`);
             };
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //---------------------------------------//
+            //-------------------------------------------------//
             //Herencia prototípica
-            console.groupCollapsed("20 - Herencia Prototípica");
+        {console.groupCollapsed("20 - Herencia Prototípica");
 
             function Perro(nombre, genero, tamanio){
                 this.super = Animal;
@@ -820,11 +819,11 @@
             Kirara.saludar();
             Kirara.sonar();
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //--------------------------------------------------
+            //-------------------------------------------------//
             //Clases y Herencia
-            console.groupCollapsed("21 - Clases y herencia");
+        {console.groupCollapsed("21 - Clases y herencia");
 
             class AnimalCl{
                 // Método especial que se ejecuta en el momento de instanciar la clase
@@ -893,11 +892,11 @@
             yae.setRaza = "kitsune";
             console.log(yae.getRaza);
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            // ---------------------------
+            //-------------------------------------------------//
             // Consola
-            console.groupCollapsed("22 - Consola");
+        {console.groupCollapsed("22 - Consola");
 
             console.log(console);
             console.error("Esto es un error.");
@@ -974,9 +973,9 @@
 
             console.assert(x < y, (x, y, pruebaXY));
 
-            console.groupEnd();
+        console.groupEnd();}
 
-            //-----------------------------------------------//
+            //-------------------------------------------------//
             //Date
         {console.groupCollapsed("23 - Objeto Date");
 
@@ -1024,7 +1023,7 @@
 
         console.groupEnd();}
 
-            //-----------------------------------------------//
+            //-------------------------------------------------//
             //Objeto Math
         {console.group("24 - Objeto Math");
 
@@ -1052,8 +1051,13 @@
             //Con redondeo
             console.log(Math.round(Math.random() * 1000));
 
-
         console.groupEnd();}
+            
+            //-------------------------------------------------//
+            //
+        {console.group("");
+            //
+        console.groupEnd()}
         </script>
     </body>
 </html>
