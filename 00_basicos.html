@@ -897,7 +897,7 @@
 
             // ---------------------------
             // Consola
-            console.groupCollapsed("Consola");
+            console.groupCollapsed("22 - Consola");
 
             console.log(console);
             console.error("Esto es un error.");
@@ -977,7 +977,59 @@
             console.groupEnd();
 
             //------------------------------------------------//
+            //Date
+            console.groupCollapsed("Date");
 
+            console.log(Date());
+            
+            let fecha = new Date();
+            console.log(fecha);
+            //Día del mes
+            console.log(fecha.getDate());
+            //Día de la semana (0-Domingo  6-Sábado)
+            console.log(fecha.getDay());
+            //Mes (0-Enero  11-Diciembre)
+            console.log(fecha.getMonth());
+            //Año
+            console.log(fecha.getFullYear());
+            //Hora
+            console.log(fecha.getHours());
+            //Minutos
+            console.log(fecha.getMinutes());
+            //Segundos
+            console.log(fecha.getSeconds());
+            //Milisegundos
+            console.log(fecha.getMilliseconds());
+            //To string
+            console.log(fecha.toString());
+            //Solo fecha
+            console.log(fecha.toDateString());
+            //Fecha y hora dd/mm/aaaa, hh:mm
+            console.log(fecha.toLocaleString());
+            //Solo fecha dd/mm/aa
+            console.log(fecha.toLocaleDateString());
+            //Solo hora
+            console.log(fecha.toLocaleTimeString());
+            //
+            console.log(fecha.getTimezoneOffset());
+            //Día del mes en UTC-0
+            console.log(fecha.getUTCDate());
+            //Hora UTC-0
+            console.log(fecha.getUTCHours());
+            //Segundos desde 1/1/1970
+            console.log(Date.now());
+            //Cáculo
+            let cumpleChristopher = new Date(2000,1,25);
+            console.log(cumpleChristopher);
+
+            console.groupEnd();
+
+            //-----------------------------------------------//
+            //
+            console.group("");
+
+            
+            console.groupEnd();
         </script>
     </body>
 </html>
