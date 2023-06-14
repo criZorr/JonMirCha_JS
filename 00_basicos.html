@@ -1099,12 +1099,51 @@
             }
                 
             //---------------------------------------//
-            //
+            //Operadores de cortocircuito
             {
-                console.group("");
-                //
-                console.groupEnd()
+                console.groupCollapsed("25 - Operadores de cortocircuito");
+                //OR - Cuando el valor de la izquierda pueda validar a true, es el valor que se cargará por defecto
+                //AND - Cuando el valor de la izquierda siempre pueda validar a false, es el valor que se cargará por defecto
+
+                saludarOC = function(nombre){
+                    nombre = nombre || "Desconocido";
+                    console.log(`Hola ${nombre}`);
+                };
+
+                saludarOC("Christopher");
+                saludarOC();
+
+                console.group("OR");
+                console.log("cadena" || "Valor de la derecha");
+                console.log(19 || "Valor de la derecha");
+                console.log(true || "Valor de la derecha");
+                console.log([] || "Valor de la derecha");
+                console.log({} || "Valor de la derecha");
+                console.log(false || "Valor de la derecha");
+                console.log(null || "Valor de la derecha");
+                console.log(undefined || "Valor de la derecha");
+                console.log("" || "Valor de la derecha");
+                console.log(0 || "Valor de la derecha");
+                console.groupEnd();
+
+                console.group("AND");
+                console.log("cadena" && "Valor de la derecha");
+                console.log(19 && "Valor de la derecha");
+                console.log(true && "Valor de la derecha");
+                console.log([] && "Valor de la derecha");
+                console.log({} && "Valor de la derecha");
+                console.log(false && "Valor de la derecha");
+                console.log(null && "Valor de la derecha");
+                console.log(undefined && "Valor de la derecha");
+                console.log("" && "Valor de la derecha");
+                console.log(0 && "Valor de la derecha");
+                console.groupEnd();
+
+                console.groupEnd();
             }
+
+            
+
         </script>
     </body>
 </html>
