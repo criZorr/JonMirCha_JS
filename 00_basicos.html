@@ -1145,7 +1145,7 @@
             //----------------------------------------//
             //Alert, confirm y prompt
             {
-                console.group("26 - Alert, confirm y prompt");
+                console.groupCollapsed("26 - Alert, confirm y prompt");
 
                 // console.log(window);
                 // let alerta = alert("Esto es una alerta");
@@ -1158,6 +1158,28 @@
 
                 console.groupEnd();
             }
+
+            //----------------------------------------//
+            //Expresiones regulares
+            {
+                console.groupCollapsed("27 - Expresiones regulares");
+
+                let cadenaER = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem";
+
+                let expReg = new RegExp("Lorem", "ig");
+                console.log(expReg.test(cadenaER));
+                console.log(expReg.exec(cadenaER));
+
+                let expReg2 = /lorem/ig;
+                console.log(expReg2.test(cadenaER));
+                console.log(expReg2.exec(cadenaER));
+
+                console.groupEnd();
+            }
+
+            //-----------------------------------------------//
+            //
+
 
         </script>
     </body>
