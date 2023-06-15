@@ -47,6 +47,9 @@
 
                 const recortarTexto = (texto, valor) => {
                     let textoSalida = "";
+                    if(Math.sign(valor)===-1){
+                        return cosole.error("El número no puede ser negativo");
+                    }
                     for (let i = 0; i < valor; i++) {
                         textoSalida += texto[i];
                     };
@@ -62,7 +65,7 @@
             {
                 console.group("03 - Ejercicios básico");
 
-                const arreglarString = (texto, separador) => console.log(texto.split(separador));
+                const arreglarString = (texto, separador = "") => console.log(texto.split(separador));
 
                 arreglarString("Hola,papu", ",")
 
@@ -74,12 +77,17 @@
                 console.group("04 - Ejercicios Básicos");
 
                 const repetirTexto = (texto = "Sin texto", cantidad = 1) => {
+
+                    if(Math.sign(cantidad)===-1){
+                        return console.error("El número no puede ser negativo");
+                    }
+
                     for (let i = 0; i < cantidad; i++) {
                         console.log(`${i+1}. ${texto}`);
                     }
                 }
 
-                repetirTexto("Brand New Love Song", 5);
+                repetirTexto("Brand New Love Song", 3);
 
                 console.groupEnd();
             }
