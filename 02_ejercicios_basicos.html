@@ -137,6 +137,26 @@
                 console.groupEnd();
             }
             // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+            {
+                console.group("07 - Ejercicios básicos.");
+
+                const palindromo = texto => {
+                    if (!texto || (typeof(texto) != "string")) return console.warn("Ingresa un String");
+
+                    texto = texto.toLowerCase();
+
+                    let textoSalida = "";
+                    for (let i = texto.length - 1; i >= 0; i--) {textoSalida += texto[i];}
+
+                    return(texto === textoSalida)
+                    ? console.log(true)
+                    : console.log(false);
+                }
+
+                palindromo("Reconocer");
+
+                console.groupEnd();
+            }
             // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
         </script>
     </body>
