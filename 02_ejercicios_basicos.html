@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Ejercicios Básicos - JS</title>
+    </head>
+    <body>
+        <h1>Ejercicios Básicos en JavaScript</h1>
+        <script>
+            // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+            {
+                console.group("01 - Ejercicios básicos");
+
+                conteoCaracteres = function (texto) {
+
+                    if (typeof(texto) === "number") {
+                        console.log(`${texto} es un número, intenta con otra cosa.`);
+                    }
+                    else if (typeof(texto) === "string") {
+                        console.log(`El texto "${texto}" tiene ${texto.length} caracteres.`);
+                    }
+                    else if (Array.isArray(texto)) {
+                        texto.forEach(el => {
+                            console.log(`El valor "${el}" tiene ${el.length} caracteres.`);
+                        });
+                    }
+                    else if (typeof(texto) === "object") {
+                        for (const key in texto) {
+                            console.log(`La llave "${key}" tiene ${key.length} caracteres, y su valor "${texto[key]}" tiene ${texto[key].length} caracteres.`);
+                        }
+                    }
+                }
+
+                conteoCaracteres("string");
+                conteoCaracteres(5);
+                conteoCaracteres({"sex": "sí", "sexo": "rico"});
+                conteoCaracteres(["sex", "sí", "sexo", "rico"]);
+
+                console.groupEnd();
+            }
+
+            // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+            {
+                
+            }
+
+            // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+            {
+
+            }
+
+            // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+            {
+
+            }
+        </script>
+    </body>
+</html>
