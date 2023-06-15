@@ -71,7 +71,17 @@
 
             // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
             {
-                
+                console.group("04 - Ejercicios Básicos");
+
+                repetirTexto = (texto = "Sin texto", cantidad = 1) => {
+                    for (let i = 0; i < cantidad; i++) {
+                        console.log(`${i+1}. ${texto}`);
+                    }
+                }
+
+                repetirTexto("Brand New Love Song", 5);
+
+                console.groupEnd();
             }
         </script>
     </body>
