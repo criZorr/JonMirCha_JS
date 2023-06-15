@@ -43,7 +43,19 @@
 
             // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
             {
-                
+                console.group("02 - Ejercicios básicos");
+
+                recortarTexto = (texto, valor) => {
+                    let textoSalida = "";
+                    for (let i = 0; i < valor; i++) {
+                        textoSalida += texto[i];
+                    }
+                    console.log(`El texto "${texto}" recortado en ${valor} caracteres es: ${textoSalida}.`);             
+                }
+
+                recortarTexto("sexo", 3);
+
+                console.groupEnd();
             }
 
             // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
