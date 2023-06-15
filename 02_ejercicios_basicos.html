@@ -49,7 +49,7 @@
                     let textoSalida = "";
                     for (let i = 0; i < valor; i++) {
                         textoSalida += texto[i];
-                    }
+                    };
                     console.log(`El texto "${texto}" recortado en ${valor} caracteres es: ${textoSalida}.`);             
                 }
 
@@ -60,12 +60,18 @@
 
             // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
             {
+                console.group("03 - Ejercicios básico");
 
+                arreglarString = (texto, separador) => console.log(texto.split(separador));
+
+                arreglarString("Hola,papu", ",")
+
+                console.groupEnd();
             }
 
             // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
             {
-
+                
             }
         </script>
     </body>
