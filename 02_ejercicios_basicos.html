@@ -13,7 +13,7 @@
             {
                 console.group("01 - Ejercicios básicos");
 
-                conteoCaracteres = function (texto) {
+                const conteoCaracteres = function (texto) {
 
                     if (typeof(texto) === "number") {
                         console.log(`${texto} es un número, intenta con otra cosa.`);
@@ -45,7 +45,7 @@
             {
                 console.group("02 - Ejercicios básicos");
 
-                recortarTexto = (texto, valor) => {
+                const recortarTexto = (texto, valor) => {
                     let textoSalida = "";
                     for (let i = 0; i < valor; i++) {
                         textoSalida += texto[i];
@@ -62,7 +62,7 @@
             {
                 console.group("03 - Ejercicios básico");
 
-                arreglarString = (texto, separador) => console.log(texto.split(separador));
+                const arreglarString = (texto, separador) => console.log(texto.split(separador));
 
                 arreglarString("Hola,papu", ",")
 
@@ -73,7 +73,7 @@
             {
                 console.group("04 - Ejercicios Básicos");
 
-                repetirTexto = (texto = "Sin texto", cantidad = 1) => {
+                const repetirTexto = (texto = "Sin texto", cantidad = 1) => {
                     for (let i = 0; i < cantidad; i++) {
                         console.log(`${i+1}. ${texto}`);
                     }
