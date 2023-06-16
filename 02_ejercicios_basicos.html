@@ -14,6 +14,7 @@
                 console.group("01 - Ejercicios básicos");
 
                 const conteoCaracteres = function (texto) {
+                    if (!texto) return console.warn("No ingresaste texto.");
 
                     if (typeof(texto) === "number") {
                         console.log(`${texto} es un número, intenta con otra cosa.`);
@@ -46,6 +47,9 @@
                 console.group("02 - Ejercicios básicos");
 
                 const recortarTexto = (texto, valor) => {
+                    if (!texto) return console.warn("No ingresaste texto.");
+                    if (!valor) return console.warn("No ingresaste el valor a cortar.");
+
                     let textoSalida = "";
                     if(Math.sign(valor)===-1){
                         return cosole.error("El número no puede ser negativo");
@@ -65,8 +69,12 @@
             {
                 console.group("03 - Ejercicios básico");
 
-                const arreglarString = (texto, separador = "") => console.log(texto.split(separador));
-
+                const arreglarString = (texto, separador = "") => {
+                    if (!texto) return console.warn("No ingresaste texto.");
+                    if (!separador) return console.warn("No ingresaste el separador.");
+                    
+                    console.log(texto.split(separador));
+                }
                 arreglarString("Hola,papu", ",")
 
                 console.groupEnd();
@@ -76,7 +84,9 @@
             {
                 console.group("04 - Ejercicios Básicos");
 
-                const repetirTexto = (texto = "Sin texto", cantidad = 1) => {
+                const repetirTexto = (texto, cantidad = 1) => {
+                    if (!texto) return console.warn("No ingresaste texto.");
+                    if (!cantidad) return console.warn("No ingresaste la cantidad a repetir.");
 
                     if(Math.sign(cantidad)===-1){
                         return console.error("El número no puede ser negativo");
@@ -115,6 +125,9 @@
                 console.group("06 - Ejercicios básicos");
 
                 const contarRepetidos = (texto, palabra) => {
+                    if (!texto) return console.warn("No ingresaste texto.");
+                    if (!palabra) return console.warn("No ingresaste la palabra a buscar.");
+
                     //Se transforman los textos (texto y palabra) en minúscula y se guardan en nuevas variables
                     let textoLower = texto.toLowerCase();
                     let palabraLower = palabra.toLowerCase();
@@ -162,7 +175,7 @@
                 console.group("08 - Ejercicios básicos.");
 
                 const eliminarPatron = (texto, patron) => {
-                    if (!texto) return console.warn("Ingresa un String");
+                    if (!texto) return console.warn("Ingresa un texto");
                     if (!patron) return console.warn("Ingresa un patrón correcto");
 
                     let expReg = new RegExp(patron,"gi");
@@ -173,6 +186,27 @@
 
                 console.groupEnd();
             }
+            // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+            {
+                console.group("09 - Ejercicios básicos.");
+
+                const aleatorio = (min, max) => {
+                    (!min)
+                        ? console.warn("Ingresa un número")
+                        : (!max)
+                            ? console.warn("Ingresa un segundo número")
+                            : (max < min)
+                                ? console.log(Math.round(Math.random() * (min - max) + max))
+                                : console.log(Math.round(Math.random() * (max - min) + min))
+
+                }
+
+                aleatorio(501, 600);
+
+                console.groupEnd();
+            }
+            // 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+            // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
         </script>
     </body>
 </html>
