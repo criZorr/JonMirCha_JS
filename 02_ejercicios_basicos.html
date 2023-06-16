@@ -91,6 +91,88 @@
 
                 console.groupEnd();
             }
+
+            //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+            {
+                console.group("05 - Ejercios básicos");
+
+                const invertirString = (texto) => {
+                    if (!texto || (typeof(texto) != "string")) return console.warn("Ingresa un String");
+
+                    let textoSalida = "";
+                    for (let i = texto.length - 1; i >= 0; i--) {
+                        textoSalida += texto[i];
+                    }
+                    return console.log(textoSalida);
+                }
+
+                invertirString("Quería venir tres días y medio, uno a medio día, dos a confirmar. Quería pedir día de mendigo y otro para ir al banco.");
+
+                console.groupEnd();
+            }
+            // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+            {
+                console.group("06 - Ejercicios básicos");
+
+                const contarRepetidos = (texto, palabra) => {
+                    //Se transforman los textos (texto y palabra) en minúscula y se guardan en nuevas variables
+                    let textoLower = texto.toLowerCase();
+                    let palabraLower = palabra.toLowerCase();
+
+                    // 1. Se reemplazan los signos de puntuación por espacios.
+                    //     "es un montón, criZorr" ---> "es un montón criZorr"
+                    // 2. Se crea un arreglo del text separado por espacios.
+                    //     "es un montón criZorr" --> ["es", "un", "montón", "criZorr"]
+                    textoLower = textoLower.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g," ").split(" ");
+
+                    let contador = 0;
+
+                    textoLower.forEach(el => {if(el === palabraLower) contador++});
+
+                    return console.log(`La palabra "${palabra}" se repite ${contador} veces.`);
+                }
+
+                contarRepetidos("José María se casó con María José y tuvieron dos hijos: María y José. Los llevaron a la escuela de San José, pero María nunca iba y José nunca fue.", "José")
+
+                console.groupEnd();
+            }
+            // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+            {
+                console.group("07 - Ejercicios básicos.");
+
+                const palindromo = texto => {
+                    if (!texto || (typeof(texto) != "string")) return console.warn("Ingresa un String");
+
+                    texto = texto.toLowerCase();
+
+                    let textoSalida = "";
+                    for (let i = texto.length - 1; i >= 0; i--) {textoSalida += texto[i];}
+
+                    return(texto === textoSalida)
+                    ? console.log(true)
+                    : console.log(false);
+                }
+
+                palindromo("Reconocer");
+
+                console.groupEnd();
+            }
+            // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+            {
+                console.group("08 - Ejercicios básicos.");
+
+                const eliminarPatron = (texto, patron) => {
+                    if (!texto) return console.warn("Ingresa un String");
+                    if (!patron) return console.warn("Ingresa un patrón correcto");
+
+                    let expReg = new RegExp(patron,"gi");
+                    return console.log(texto.replace(expReg, ""));
+                }
+                
+                eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+
+                console.groupEnd();
+            }
         </script>
     </body>
 </html>
