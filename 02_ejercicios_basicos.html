@@ -158,6 +158,21 @@
                 console.groupEnd();
             }
             // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+            {
+                console.group("08 - Ejercicios básicos.");
+
+                const eliminarPatron = (texto, patron) => {
+                    if (!texto) return console.warn("Ingresa un String");
+                    if (!patron) return console.warn("Ingresa un patrón correcto");
+
+                    let expReg = new RegExp(patron,"gi");
+                    return console.log(texto.replace(expReg, ""));
+                }
+                
+                eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+
+                console.groupEnd();
+            }
         </script>
     </body>
 </html>
