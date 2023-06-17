@@ -311,8 +311,41 @@
 
                 console.groupEnd();
             }
-            
+
             // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+            {
+                console.group("14 - Ejercicios básicos.");
+
+                const conversionCF = (valor, tipo) => {
+                    if (valor === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(valor) != "number") return console.warn("¡Ingresa un número!");
+                    if (typeof(tipo) != "string") return console.warn("Ingresa una unidad (C o F).");
+
+                    tipo = tipo.toLowerCase();
+                    let resultado = 0;
+
+                    if(tipo === "c"){
+                        resultado = valor * (9/5) + 32;
+                        resultado = resultado.toFixed(2);
+                        return console.log(`${valor} °C son ${resultado} °F.`);
+                    }
+                    else if (tipo === "f") {
+                        resultado = (valor - 32) / (9/5);
+                        resultado = resultado.toFixed(2);
+                        return console.log(`${valor} °F son ${resultado} °C.`);
+                    }
+                    else {
+                        console.warn("Ingresa una unidad válida (C o F).");
+                    }
+
+                }
+
+                conversionCF(100, "F");
+
+                console.groupEnd();
+            }
+
+            //
         </script>
     </body>
 </html>
