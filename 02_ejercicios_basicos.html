@@ -235,7 +235,7 @@
 
             // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
             {
-                console.group("11 - Ejercicios básicos");
+                console.group("11 - Ejercicios básicos.");
 
                 const factorial = numero => {
                     if (numero >= 0) {
@@ -267,6 +267,85 @@
 
                 console.groupEnd();
             }
+
+            // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+            {
+                console.group("12 - Ejercicios básicos.");
+
+                const esPrimo = numero => {
+                    if (!numero) return console.warn("Ingresa un número.");
+                    if (typeof(numero) != "number") return console.warn("¡Ingresa un número!");
+                    if (numero != Math.round(numero)) return console.warn("Ingresa un número entero.");
+                    if (numero <= 1) return console.warn(false);
+
+                    for (let i = numero - 1; i > 1; i--) {
+                        if (numero%i == 0) {
+                            return console.log(false);;
+                        }
+                        
+                    }
+
+                    return console.log(true);
+                }
+
+                esPrimo(7);
+
+                console.groupEnd();
+            }
+
+            // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+            {
+                console.group("13 - Ejercicios básicos.");
+
+                const parImpar = numero => {
+                    if (numero === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(numero) != "number") return console.warn("¡Ingresa un número!");
+                    if (numero != Math.round(numero)) return console.warn("Ingresa un número entero.");
+
+                    (numero % 2 === 0)
+                    ? console.log("Par")
+                    : console.log("Impar");
+                }
+
+                parImpar(29);
+
+                console.groupEnd();
+            }
+
+            // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+            {
+                console.group("14 - Ejercicios básicos.");
+
+                const conversionCF = (valor, tipo) => {
+                    if (valor === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(valor) != "number") return console.warn("¡Ingresa un número!");
+                    if (typeof(tipo) != "string") return console.warn("Ingresa una unidad (C o F).");
+
+                    tipo = tipo.toLowerCase();
+                    let resultado = 0;
+
+                    if(tipo === "c"){
+                        resultado = valor * (9/5) + 32;
+                        resultado = resultado.toFixed(2);
+                        return console.log(`${valor} °C son ${resultado} °F.`);
+                    }
+                    else if (tipo === "f") {
+                        resultado = (valor - 32) / (9/5);
+                        resultado = resultado.toFixed(2);
+                        return console.log(`${valor} °F son ${resultado} °C.`);
+                    }
+                    else {
+                        console.warn("Ingresa una unidad válida (C o F).");
+                    }
+
+                }
+
+                conversionCF(100, "F");
+
+                console.groupEnd();
+            }
+
+            //
         </script>
     </body>
 </html>
