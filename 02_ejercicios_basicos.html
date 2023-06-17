@@ -267,7 +267,7 @@
 
                 console.groupEnd();
             }
-            
+
             // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
             {
                 console.group("12 - Ejercicios básicos.");
@@ -294,6 +294,24 @@
             }
 
             // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+            {
+                console.group("13 - Ejercicios básicos.");
+
+                const parImpar = numero => {
+                    if (numero === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(numero) != "number") return console.warn("¡Ingresa un número!");
+                    if (numero != Math.round(numero)) return console.warn("Ingresa un número entero.");
+
+                    (numero % 2 === 0)
+                    ? console.log("Par")
+                    : console.log("Impar");
+                }
+
+                parImpar(29);
+
+                console.groupEnd();
+            }
+            
             // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
         </script>
     </body>
