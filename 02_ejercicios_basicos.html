@@ -272,8 +272,8 @@
             {
                 console.group("12 - Ejercicios básicos.");
 
-                const esPrimo = numero => {
-                    if (!numero) return console.warn("Ingresa un número.");
+                const esPrimo = (numero = undefined) => {
+                    if (numero === undefined) return console.warn("Ingresa un número.");
                     if (typeof(numero) != "number") return console.warn("¡Ingresa un número!");
                     if (numero != Math.round(numero)) return console.warn("Ingresa un número entero.");
                     if (numero <= 1) return console.warn(false);
@@ -345,7 +345,105 @@
                 console.groupEnd();
             }
 
-            //
+            //15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+            {
+                console.group("15 - Ejercicios básicos.");
+            
+                const conversionNum = (valor = undefined, base = undefined) => {
+
+                    if (valor === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(valor) !== "number") return console.warn("¡Ingresa un número!");
+                    if(valor < 0) return console.warn("No se admiten negativos, causan desboradmiento.");
+
+                    if (base === undefined) return console.warn("Ingresa una base válida (2 o 10).");
+                    if (typeof(base) !== "number") return console.warn("¡Ingresa el número de una base válida (2 o 10)!");
+                    
+
+                    let numConverasion = valor;
+                    let contador = 0;
+                    let numeroFinal = [];
+
+                    if (base === 2) {
+                        numConverasion = numConverasion.toString().split("");
+                        numeroFinal = 0;
+
+                        for (let i = numConverasion.length - 1; i >= 0; i--) {
+                            numeroFinal += parseInt(numConverasion[contador])*(Math.pow(2, i));
+                            contador ++;
+                        }
+                        return console.log(numeroFinal);
+                    }
+                    else if (base === 10) {
+                        while (numConverasion >= 1) {
+                            numeroFinal.push(numConverasion % 2);
+                            numConverasion = parseInt(numConverasion/2);
+                        }
+                        numeroFinal = numeroFinal.reverse().join("");
+                        return console.log(parseInt(numeroFinal));
+                    }
+                    else{
+                        return console.warn("No es una base soportada");
+                    }
+                    
+                }
+
+                conversionNum(100, 2);
+
+                console.groupEnd();
+            }
+
+            //16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+            {
+                console.group("16 - Ejercicios básicos.");
+
+                const descuento = (valor = undefined, descuentoA) => {
+                    if (valor === undefined) return console.warn("Ingresa un número.");
+                    if (typeof(valor) !== "number") return console.warn("¡Ingresa un número!");
+                    
+                    if (descuentoA === undefined) return console.warn("Ingresa el porcentaje a descontar.");
+                    if (typeof(descuentoA) !== "number") return console.warn("¡Ingresa el porcentaje a descontar!");
+
+
+                    return console.log((valor * (1 - (descuentoA/100))).toFixed(2));
+                }
+
+                descuento(1000, 20);
+
+                console.groupEnd();
+            }
+            //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+            {
+                console.group("17 - Ejercicios básicos.");
+
+                const hastaHoy = (dia, mes, year, hora = 0, minutos = 0, segundos = 0) => {
+                    if ((dia|mes|year|hora|minutos|segundos) < 0) return console.warn("No se aceptan negativos.");
+
+                    if (!dia) return console.warn("Ingresa el día.");
+                    if (typeof(dia) !== "number") return console.warn("¡Ingresa el día en números!");
+
+                    if (!mes) return console.warn("Ingresa el mes.");
+                    if (typeof(mes) !== "number") return console.warn("¡Ingresa el mes en números!");
+
+                    if (!year) return console.warn("Ingresa el año.");
+                    if (typeof(year) !== "number") return console.warn("¡Ingresa el año en números!");
+
+                    if (typeof(hora) !== "number") return console.warn("¡Ingresa la hora en números!");
+
+                    if (typeof(minutos) !== "number") return console.warn("¡Ingresa los minutos en números!");
+
+                    if (typeof(segundos) !== "number") return console.warn("¡Ingresa los segundos en números!");
+
+                    let hoy = new Date();
+                    let fecha = new Date(year, (mes - 1), dia, hora, minutos, segundos);
+                    let resultado = hoy.getFullYear() - fecha.getFullYear();
+                    return console.log(resultado);
+
+                }
+
+                hastaHoy(25, 2, 2000);
+
+                console.groupEnd();
+            }
         </script>
     </body>
 </html>
