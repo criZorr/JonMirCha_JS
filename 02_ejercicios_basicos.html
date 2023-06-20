@@ -413,36 +413,7 @@
             }
             //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
             {
-                console.group("17 - Ejercicios básicos.");
 
-                const hastaHoy = (dia, mes, year, hora = 0, minutos = 0, segundos = 0) => {
-                    if ((dia|mes|year|hora|minutos|segundos) < 0) return console.warn("No se aceptan negativos.");
-
-                    if (!dia) return console.warn("Ingresa el día.");
-                    if (typeof(dia) !== "number") return console.warn("¡Ingresa el día en números!");
-
-                    if (!mes) return console.warn("Ingresa el mes.");
-                    if (typeof(mes) !== "number") return console.warn("¡Ingresa el mes en números!");
-
-                    if (!year) return console.warn("Ingresa el año.");
-                    if (typeof(year) !== "number") return console.warn("¡Ingresa el año en números!");
-
-                    if (typeof(hora) !== "number") return console.warn("¡Ingresa la hora en números!");
-
-                    if (typeof(minutos) !== "number") return console.warn("¡Ingresa los minutos en números!");
-
-                    if (typeof(segundos) !== "number") return console.warn("¡Ingresa los segundos en números!");
-
-                    let hoy = new Date();
-                    let fecha = new Date(year, (mes - 1), dia, hora, minutos, segundos);
-                    let resultado = hoy.getFullYear() - fecha.getFullYear();
-                    return console.log(resultado);
-
-                }
-
-                hastaHoy(25, 2, 2000);
-
-                console.groupEnd();
             }
         </script>
     </body>
