@@ -444,6 +444,26 @@
 
                 console.groupEnd();
             }
+
+            //18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+            {
+                console.group("18 - Ejercicios básicos.");
+
+                const conteoVoCo = texto => {
+                    if (!texto) return console.warn("Ingresa un texto");
+                    if (typeof(texto) !== "string") return console.warn("¡Ingresa un texto!");
+
+                    let vocales = texto.match(/[aáeéiíoóuú]/gi).length;
+                    let letras = texto.match(/[a-zÁ-ÿ]/gi).length - vocales;
+                    return console.log(`El texto "${texto}" tiene ${vocales} vocales y ${letras} letras.`);
+                }
+
+                conteoVoCo("Y se ve que están, los vidrios se retuercen.");
+
+                console.groupEnd();
+            }
+            //19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+            //20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
         </script>
     </body>
 </html>
