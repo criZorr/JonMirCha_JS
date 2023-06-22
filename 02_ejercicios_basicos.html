@@ -499,6 +499,24 @@
                 console.groupEnd();
             }
             //20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+            {
+                console.group("20 - Ejercicios básicos.");
+
+                const validarEmail = email => {
+
+                    let validacion = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
+
+                    if (validacion.test(email)) return console.log(true);
+                    else return console.log(false);
+
+                }
+
+                validarEmail("crizorr@gmail.com");
+
+                console.groupEnd();
+            }
+
+            //
         </script>
     </body>
 </html>
