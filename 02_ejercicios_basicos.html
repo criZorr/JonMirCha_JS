@@ -629,6 +629,30 @@
                 console.groupEnd();
             }
             //25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+            {
+                console.group("25 - Ejercicios básicos.");
+
+                const quitarRepetidos = arreglo =>{
+                    if (!arreglo) return console.warn("Ingresa un arreglo.");
+                    if (arreglo.constructor.name !== "Array") return console.warn("¡Ingresa un arreglo!");
+
+                    let nuevoArreglo = [];
+
+                    arreglo.forEach(element => {
+                        nuevoArreglo.push(element);
+                        for (let i = 0; i < nuevoArreglo.length - 1; i++) {
+                            if (element === nuevoArreglo[i]) {
+                                nuevoArreglo.pop();
+                            }
+                        }
+                    });
+                    return console.log(nuevoArreglo);
+                }
+                
+                quitarRepetidos(["x", 10, "x", 2, "10", 10, true, true]);
+
+                console.groupEnd();
+            }
             //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
         </script>
     </body>
