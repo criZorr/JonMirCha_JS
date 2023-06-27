@@ -654,6 +654,29 @@
                 console.groupEnd();
             }
             //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+            {
+                console.group("26 - Ejercicios básicos.");
+
+                const promedio = arreglo => {
+                    if (!arreglo) return console.warn("Ingresa un arreglo.");
+                    if (arreglo.constructor.name !== "Array") return console.warn("¡Ingresa un arreglo!");
+                    for (let num of arreglo){
+                        if(typeof(num) !== "number") return console.warn(`"${num}" no es un número.`);
+                    }
+
+                    let suma = 0;
+
+                    arreglo.forEach(element => {
+                        suma += element;
+                    });
+
+                    return console.log(suma/(arreglo.length));
+                }
+
+                promedio([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]);
+
+                console.groupEnd();
+            }
         </script>
     </body>
 </html>
