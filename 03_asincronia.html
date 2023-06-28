@@ -169,8 +169,39 @@
                 .catch(err => console.error(err));
             }
 
-            //
+            //Funciones asíncronas (Async / Await)
             {
+                console.info("05 - Funciones asíncronas (Async / Await)");
+
+                async function funcionAsincronaDeclarada () {
+                    try {
+                        console.log("Inicio de Función Asíncrona");
+                        let obj = await cuadradoPromise(0);
+                        console.log(`Función asíncrona: ${obj.value}, ${obj.result}`);
+
+                        obj = await cuadradoPromise(1);
+                        console.log(`Función asíncrona: ${obj.value}, ${obj.result}`);
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+
+                funcionAsincronaDeclarada();
+
+                const funcionAsincronaExpresada = async () => {
+                    try {
+                        console.log("Inicio de Función Asíncrona");
+                        let obj = await cuadradoPromise(0);
+                        console.log(`Función asíncrona: ${obj.value}, ${obj.result}`);
+
+                        obj = await cuadradoPromise(1);
+                        console.log(`Función asíncrona: ${obj.value}, ${obj.result}`);
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+
+                funcionAsincronaExpresada();
                 
             }
 
