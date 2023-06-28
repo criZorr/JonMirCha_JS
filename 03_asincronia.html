@@ -8,5 +8,38 @@
     </head>
     <body>
         <h1>Asincronía en JavaScript</h1>
+        <script>
+            //Temporizadores
+            {
+                console.group("01 - Temporizadores.");
+                /* console.log("Inicio.");
+                setTimeout(() => {
+                    console.log("Ejecutando un SetTimeOut. Se ejecuta una vez.");
+                }, 3000);
+
+                setInterval(() => {
+                    console.log("Ejecutando un SetInterval. Se ejecuta indefinidamente cada cierto intervalo.");
+                }, 1000); */
+
+                let temporizador = setTimeout(() => {
+                    console.log(new Date().toLocaleTimeString());
+                }, 1000);
+
+                clearTimeout(temporizador);
+                console.log("Después del clearTimeout.");
+
+                let temporizador2 = setInterval(() => {
+                    console.log(new Date().toLocaleTimeString());
+                }, 1000);
+
+                clearInterval(temporizador2);
+                console.log("Después del clearInterval.");
+
+                console.groupEnd();
+            }
+
+            //
+
+        </script>
     </body>
 </html>
