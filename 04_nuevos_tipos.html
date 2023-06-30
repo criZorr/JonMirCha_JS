@@ -12,6 +12,8 @@
         <script>
             //Symbols
             {
+                console.group("01 - Symbol.");
+
                 let id = Symbol("id");
                 let id2 = Symbol("id2");
 
@@ -47,10 +49,14 @@
                 }
 
                 console.log(Object.getOwnPropertySymbols(persona));
+
+                console.groupEnd();
             }
 
             //Sets
             {
+                console.group("02 - Set.")
+
                 const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOLA"]);
                 console.log(set);
                 console.log(set.size);
@@ -91,6 +97,57 @@
 
                 set2.clear();
                 console.log(set2);
+
+                console.groupEnd();
+            }
+
+            //Maps
+            {
+                console.group("03 - Map.");
+
+                const mapa = new Map();
+                mapa.set("nombre", "Christopher");
+                mapa.set("apellido", "Morales");
+                mapa.set("edad", 23);
+
+                console.log(mapa);
+                console.log(mapa.size);
+                console.log(mapa.has("correo"));
+                console.log(mapa.has("nombre"));
+                console.log(mapa.get("nombre"));
+
+                mapa.set("nombre", "Christopher Morales");
+                console.log(mapa.get("nombre"));
+
+                mapa.delete("apellido");
+                console.log(mapa);
+
+                mapa.set(19, "diecinueve");
+                mapa.set(false, "falso");
+                mapa.set({}, {});
+
+                console.log(mapa);
+
+                for (let [key, value] of mapa) {
+                    console.log(`Llave: ${key}, Valor: ${value}`);
+                }
+
+                const mapa2 = new Map([
+                    ["nombre", "Misty"],
+                    ["edad", "6"],
+                    ["animal", "gato"],
+                    [null, "nulo"]
+                ]);
+
+                console.log(mapa2);
+
+                const llavesMapa2 = [...mapa2.keys()];
+                const valoresMapa2 = [...mapa2.values()];
+
+                console.log(llavesMapa2);
+                console.log(valoresMapa2);
+
+                console.groupEnd();
             }
         </script>
     </body>
