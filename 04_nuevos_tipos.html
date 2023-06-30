@@ -48,6 +48,50 @@
 
                 console.log(Object.getOwnPropertySymbols(persona));
             }
+
+            //Sets
+            {
+                const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOLA"]);
+                console.log(set);
+                console.log(set.size);
+
+                const set2 = new Set();
+                set2.add(1);
+                set2.add(2);
+                set2.add(2);
+                set2.add(3);
+                set2.add(true);
+                set2.add(false);
+                set2.add(true);
+                set2.add({});
+
+                console.log(set2);
+                console.log(set2.size);
+
+                console.log("Recorriendo Set");
+
+                for (const i of set) {
+                    console.log(i);
+                }
+
+                console.log("Recorriendo Set2");
+                set2.forEach(item => console.log(item));
+
+                console.log(Array.from(set)[0]);
+
+                let arr4 = Array.from(set);
+                console.log(arr4[0]);
+                console.log(arr4[9]);
+
+                set.delete("HOLA");
+                console.log(set);
+
+                console.log(set.has("hola"));
+                console.log(set.has(19));
+
+                set2.clear();
+                console.log(set2);
+            }
         </script>
     </body>
 </html>
