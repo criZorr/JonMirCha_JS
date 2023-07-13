@@ -345,6 +345,21 @@
 
                 console.groupEnd();
             }
+
+            //Propiedades dinámicas de los objetos
+            {
+                let aleatorio = Math.round(Math.random() * 100 + 5);
+                const objUsuarios = {
+                    [`id_${aleatorio}`]: "Valor aleatorio"
+                };
+                const usuarios = ["Christopher", "Jhon", "Kira", "Kurama", "Misty"];
+
+                console.log(objUsuarios);
+
+                usuarios.forEach((usuario, index) => objUsuarios[`id_${index}`] = usuario);
+
+                console.log(objUsuarios);
+            }
         </script>
     </body>
 </html>
