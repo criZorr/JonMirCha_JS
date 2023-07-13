@@ -60,6 +60,43 @@
             let criZorr = new Persona("Christopher");
             criZorr();
 
+
+            // Call, apply, bind
+            console.group("Call, apply, bind");
+
+            this.lugar = "Contexto Global";
+
+            function saludar(saludo, aQuien) {
+                console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+            }
+            saludar("Hola", "xanxo");
+
+            const obj4 = {
+                lugar: "Contexto Objeto"
+            };
+
+            //Lamo un contexto
+            saludar.call(obj4, "Hola", "Christopher");
+            saludar.apply(obj4, ["Adios", "criZorr"]);
+
+            saludar.call(null, "Hola", "Christopher");
+
+            const persona2 = {
+                nombre: "Christopher",
+                saludar: function(){
+                    console.log(`Hola ${this.nombre}`);
+                }
+            }
+
+            persona2.saludar();
+
+            const otraPersona = {
+                saludar: persona2.saludar.bind(persona2)
+            }
+
+            otraPersona.saludar();
+
+            console.groupEnd();
         </script>
     </body>
 </html>
