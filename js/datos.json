@@ -1,7 +1,7 @@
 {
     "cadena": "Christopher",
-    "numero": 23,
-    "booleano": true,
+    "numero": "23",
+    "booleano": "true",
     "arreglo": ["música", "programar", "diseñar"],
     "objeto": {
         "twitter": "@criZorr",
