@@ -1,0 +1,11 @@
+{
+    "cadena": "Christopher",
+    "numero": 23,
+    "booleano": true,
+    "arreglo": ["música", "programar", "diseñar"],
+    "objeto": {
+        "twitter": "@criZorr",
+        "email": "criZorr@gmail.com"
+    },
+    "nulo": null
+}
