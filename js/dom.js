@@ -397,6 +397,36 @@
     //$cards.before($newCard);
     //$cards.before($newCard);
 
+    console.groupEnd();
+}
+
+//Manejadores de Eventos 
+{
+    console.group("12 - Manejadores de Eventos");
+
+    function holaMundo(){
+        alert("Hola mundo");
+        console.log(event);
+    }
+
+    const $eventoSemantico = document.getElementById("evento-semantico"),
+    $eventoMultiple = document.getElementById("evento-multiple");
+
+    $eventoSemantico.onclick = holaMundo;
+    $eventoSemantico.onclick = function (e){
+        alert("Hola Manejador de Eventos Semántico");
+        console.log(e);
+        console.log(event);
+    };
+
+    $eventoMultiple.addEventListener("click", holaMundo);
+    $eventoMultiple.addEventListener("click", (e) => {
+        alert("Hola Manejador de Eventos Múltiple");
+        console.log(e);
+        console.log(e.type);
+        console.log(e.target);
+        console.log(event);
+    });
 
     console.groupEnd();
 }
