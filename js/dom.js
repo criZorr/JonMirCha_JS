@@ -292,3 +292,47 @@
 
     console.groupEnd();
 }
+
+//Templates HTML
+{
+    console.group("09 - Templates HTML");
+
+    const $cards = document.querySelector(".cards"),
+    $template9 = document.getElementById("template-card").content,
+    $fragment9 = document.createDocumentFragment(),
+    cardContent = [
+        {
+            title: "Tecnología",
+            img: "https://picsum.photos/200/200?tech",
+        },
+        {
+            title: "Animales",
+            img: "https://picsum.photos/200/200?animals",
+        },
+        {
+            title: "Arquitectura",
+            img: "https://picsum.photos/200/200?arch",
+        },
+        {
+            title: "Gente",
+            img: "https://picsum.photos/200/200?people",
+        },
+        {
+            title: "Naturaleza",
+            img: "https://picsum.photos/200/200?nature",
+        }
+    ];
+
+    cardContent.forEach(el => {
+        $template9.querySelector("img").setAttribute("src", el.img);
+        $template9.querySelector("img").setAttribute("alt", el.title);
+        $template9.querySelector("figcaption").textContent = el.title;
+
+        let $clone = document.importNode($template9, true);
+        $fragment9.appendChild($clone);
+    });
+
+    $cards.appendChild($fragment9);
+    
+    console.groupEnd();
+}
