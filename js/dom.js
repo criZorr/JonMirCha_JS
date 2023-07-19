@@ -360,3 +360,43 @@
 
     console.groupEnd();
 }
+
+//Modificando Elementos (Cool Style)
+{
+    console.group("11 - Modificando Elementos (Cool Style)");
+
+    /*
+    .insertAdjacent...
+        .insertAdjacentElemento(position, el)
+        .insertAdjacentHTML(position, html)
+        .insertAdjacentText(position, text)
+
+    Posiciones:
+        beforebegin(hermano anterior)
+        afterbegin(primer hijo)
+        beforeend(último hijo)
+        afterend(hermano siguiente)
+    */
+
+    const $cards = document.querySelector(".cards"),
+    $newCard = document.createElement("figure");
+
+    let $contenCard=`
+    <img src="https://picsum.photos/200/200?any" alt="Any">
+    <figcaption></figcaption>
+    `;
+
+    $newCard.classList.add("card");
+
+    $newCard.insertAdjacentHTML("beforeend", $contenCard);
+    $newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "AnyOwO")
+    //$cards.insertAdjacentElement("afterbegin", $newCard);
+
+    //$cards.prepend($newCard);
+    //$cards.append($newCard);
+    //$cards.before($newCard);
+    //$cards.before($newCard);
+
+
+    console.groupEnd();
+}
