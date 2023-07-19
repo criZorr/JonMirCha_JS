@@ -133,10 +133,48 @@
     $body.style.backgroundColor = varDarkColor;
     $body.style.color = varYellowColor;
 
-    $html.style.setProperty("--dark-color", "#333");
+    $html.style.setProperty("--dark-color", "#222");
     varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
 
-    $body.style.setProperty("background-color", varDarkColor);
+    $body.style.setProperty("background-color", "#fff");
+
+    console.groupEnd();
+}
+
+//
+{
+    console.group("05 - Clases CSS");
+
+    const $card = document.querySelector(".card");
+
+    console.log($card);
+    console.log($card.className);
+    console.log($card.classList);
+    console.log($card.classList.contains("rotate-45"));
+
+    $card.classList.add("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+    console.log($card.className);
+    console.log($card.classList);
+
+    $card.classList.remove("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+
+    $card.classList.toggle("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+
+    $card.classList.toggle("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+
+    $card.classList.toggle("rotate-45");
+    $card.classList.replace("rotate-45", "rotate-135");
+
+    $card.classList.add("opacity-80", "sepia");
+    $card.classList.remove("opacity-80", "sepia");
+
+    $card.classList.toggle("opacity-80", "sepia");
+
+    console.log($card.className);
 
     console.groupEnd();
 }
