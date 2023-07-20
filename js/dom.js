@@ -454,12 +454,13 @@
     console.groupEnd();
 }
 
+/*
 //Flujo de Eventos (Burbuja y Captura)
 {
     console.group("14 - Flujo de Eventos (Burbuja y Captura)");
     document.body.style.setProperty("color", "#000");
 
-    const $divsEventos = document.querySelectorAll(".eventos-flujo div")
+    const $divsEventos = document.querySelectorAll(".eventos-flujo div"),
     $linkEventos = document.querySelector(".eventos-flujo a");
 
     function flujoEventos(e) {
@@ -489,12 +490,40 @@
 {
     console.group("15 - DOM: stopPropagation & preventDefault");
 
+    const $linkEventos = document.querySelector(".eventos-flujo a");
+
     $linkEventos.addEventListener("click", (e) => {
         alert(`Hola papu.`);
         e.preventDefault();
         e.stopPropagation();
     });
 
+    console.groupEnd();
+}
+*/
+
+//Delegación de Eventos
+{
+    console.group("16 - Delegación de Eventos");
+    document.body.style.setProperty("color", "#000");
+
+    function flujoEventos2(e) {
+        console.log(`Hola te saluda ${this.className}, el click lo originó ${e.target.className}`);
+    };
+
+    document.addEventListener("click", (e) => {
+        console.log("Click en:", e.target);
+        
+        if (e.target.matches(".eventos-flujo div")){
+            flujoEventos2(e);
+        }
+
+        if (e.target.matches(".eventos-flujo a")) {
+            alert(`Hola papu.`);
+            e.preventDefault();
+        }
+
+    });
 
     console.groupEnd();
 }
