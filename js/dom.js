@@ -453,3 +453,32 @@
 
     console.groupEnd();
 }
+
+//Flujo de Eventos (Burbuja y Captura)
+{
+    console.group("14 - Flujo de Eventos (Burbuja y Captura)");
+    document.body.style.setProperty("color", "#000");
+
+    const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+
+    function flujoEventos(e) {
+        console.log(`Hola te saluda ${this.className}, el click lo originó ${e.target.className}`);
+    }
+
+    console.log($divsEventos);
+
+    
+    $divsEventos.forEach(div => {
+        //Burbuja: default = false
+        //div.addEventListener("click", flujoEventos, false);
+        //Captura: true
+        //div.addEventListener("click", flujoEventos, true);
+        div.addEventListener("click", flujoEventos, {
+            capture: false,
+            once: true,
+        });
+    });
+
+
+    console.groupEnd();
+}
