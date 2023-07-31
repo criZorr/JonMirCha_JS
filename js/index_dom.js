@@ -6,6 +6,5 @@ const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
     hamburguerMenu(".panel-btn", ".panel", ".menu a");
     relojDigital("#reloj", "#btn-inciar-r", "#btn-detener-r");
-    reloj("start", "#btn-inciar-a", "alarma");
-    reloj("stop", "#btn-detener-a", "alarma");
+    alarm("#btn-inciar-a", "#btn-detener-a");
 });
