@@ -21,17 +21,18 @@ export function relojDigital(clock, btnPlay, btnStop) {
     });
 };
 
-export function alarm(btnPlay, btnStop) {
-    let sound = new Audio("./assets/hololive_alarm.mp3")
+export function alarm(source, btnPlay, btnStop) {
+    let sound = new Audio(source);
+    
     d.addEventListener("click", e => {
         if (e.target.matches(btnPlay)) {
-            sound.load();
             sound.play();
             e.target.disabled = true;
         };
 
         if (e.target.matches(btnStop)) {
             sound.pause();
+            sound.load();
             d.querySelector(btnPlay).disabled = false;
         };
     }); 
