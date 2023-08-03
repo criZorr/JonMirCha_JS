@@ -1,5 +1,5 @@
 /* ****  Reset CSS  ***** */
-:root{
+:root {
     --main-font: sans-serif;
     --font-size: 16px;
     --main-color: #f7df1e;
@@ -9,7 +9,7 @@
     --container-width: 1200px;
 }
 
-html{
+html {
     box-sizing: border-box;
     font-family: var(--main-font);
     font-size: var(--font-size);
@@ -18,21 +18,21 @@ html{
 
 *,
 *:before,
-*:after{
+*:after {
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
     overflow-x: hidden;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
-.header{
+.header {
     position: sticky;
     z-index: 997;
     top: 0;
@@ -41,12 +41,12 @@ img{
     color: var(--second-color);
 }
 
-.header h1{
+.header h1 {
     margin: 0 auto;
     text-align: center;
 }
 
-.section{
+.section {
     padding: 2rem;
     padding-top: 4rem;
     margin-left: auto;
@@ -57,7 +57,7 @@ img{
     text-align: center;
 }
 
-.panel{
+.panel {
     position: fixed;
     z-index: 998;
     top: 0;
@@ -73,13 +73,13 @@ img{
     transform: translate(0, -100%);
 }
 
-.panel.is-active{
+.panel.is-active {
     transform: translate(0, 0);
     opacity: 1;
     visibility: visible;
 }
 
-.panel-btn{
+.panel-btn {
     position: fixed;
     z-index: 999;
     bottom: 1vh;
@@ -103,7 +103,7 @@ img{
     text-align: center;
 }
 
-.menu a{
+.menu a {
     padding: 2rem;
     width: inherit;
     display: block;
@@ -113,23 +113,58 @@ img{
     transition: all 0.3s ease;
 }
 
-.menu a:hover{
+.menu a:hover {
     font-weight: bold;
     color: var(--second-color);
     background-color: var(--main-modal-color);
 }
 
 /*****   Eventos del teclado   *****/
-.stage{
+.stage {
     display: flex;
     min-height: 50vh;
     background-color: var(--second-color);
 }
 
-.ball{
+.ball {
     margin: auto;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: var(--main-color);
+}
+
+/*****   Botón Scroll   *****/
+
+.scroll-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 6vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border: none;
+    font-size: xx-large;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+
+}
+
+.scroll-btn.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-btn:hover {
+    color: var(--main-color);
+    background-color: var(--second-color);
+    cursor: pointer;
 }
