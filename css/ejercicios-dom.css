@@ -124,6 +124,8 @@ img {
     display: flex;
     min-height: 50vh;
     background-color: var(--second-color);
+    /* dark mode */
+    transition: all 0.3s ease;
 }
 
 .ball {
@@ -164,4 +166,47 @@ img {
     color: var(--main-color);
     background-color: var(--second-color);
     cursor: pointer;
+}
+
+/*****   Botón modo oscuro   *****/
+
+.dark-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border: 0;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+.dark-btn:hover {
+    color: var(--main-color);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+/* .dark-btn.is-active {
+    font-size: large;
+} */
+
+.main {
+    /* dark mode */
+    transition: all 0.3s ease;
+}
+
+.main.dark {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.stage.dark {
+    background-color: #444;
 }
