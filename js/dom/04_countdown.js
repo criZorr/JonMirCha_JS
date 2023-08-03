@@ -1,18 +1,22 @@
 const d = document;
 
-export function countdown(selector, day, month, year) {
-    let date = new Date(year, month - 1, day);
+export function countdown(id, limitDate, finalMessage) {
+    const date = new Date(limitDate),
+        $countdown = d.getElementById(id)
 
-    let countdownTempo;
+    let countdownTempo = setInterval(() => {
+        let now = new Date(),
+            limitTime = date - now,
+            days = Math.floor(limitTime / (1000 * 60 * 60 * 24)),
+            hours = ("0" + Math.floor((limitTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).slice(-2),
+            minutes = ("0" + Math.floor((limitTime % (1000 * 60 * 60)) / (1000 * 60))).slice(-2),
+            seconds = ("0" + Math.floor((limitTime % (1000 * 60)) / (1000))).slice(-2);
 
-    countdownTempo = setInterval(() => {
-        let now = new Date();
-        let seconds = 59 + date.getSeconds() - now.getSeconds();
-        let minutes = 59 + date.getMinutes() - now.getMinutes();
-        let hours = 23 + date.getHours() - now.getHours();
-        let days = (date - now) / (1000 * 3600 * 24);
-        days = Math.floor(days);
+        $countdown.innerHTML = `<h3> ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos.</h3>`;
 
-        d.querySelector(selector).innerHTML = `<h3> ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos.</h3>`;
+        if (limitTime < 0) {
+            clearInterval(countdownTempo);
+            $countdown.innerHTML = `<h3> ${finalMessage}</h3>`;
+        }
     }, 1000);
 }

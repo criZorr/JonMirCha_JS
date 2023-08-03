@@ -9,7 +9,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     hamburguerMenu(".panel-btn", ".panel", ".menu a");
     relojDigital("#reloj", "#btn-inciar-r", "#btn-detener-r");
     alarm("./assets/hololive_alarm.mp3", "#btn-inciar-a", "#btn-detener-a");
-    countdown("#countdown", 25, 2, 2024);
+    countdown("countdown", "February 25, 2024", "Feliz cumpleaños.");
 });
 
 d.addEventListener("keydown", e => {
