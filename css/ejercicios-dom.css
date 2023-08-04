@@ -124,8 +124,6 @@ img {
     display: flex;
     min-height: 50vh;
     background-color: var(--second-color);
-    /* dark mode */
-    transition: all 0.3s ease;
 }
 
 .ball {
@@ -193,20 +191,11 @@ img {
     cursor: pointer;
 }
 
-/* .dark-btn.is-active {
-    font-size: large;
-} */
-
-.main {
-    /* dark mode */
-    transition: all 0.3s ease;
-}
-
-.main.dark {
+.dark-mode{
     background-color: var(--second-color);
     color: var(--main-color);
 }
 
-.stage.dark {
+.stage.dark-mode{
     background-color: #444;
 }

@@ -1,22 +1,34 @@
 const d = document;
 
-export function darkTheme(btn, screen) {
-    const $darkBtn = d.querySelector(btn);
+export function darkTheme(btn, classDark) {
+    const $darkBtn = d.querySelector(btn),
+    $selectors = d.querySelectorAll("[data-dark]");
+    console.log($selectors);
+
+    let moon = "🌙",
+    sun = "☀️";
+
+    let sheet = d.createElement("style");
+    let styles = "";
+
+    $selectors.forEach(el => {
+        if (el.className !== "") styles += `${el.className}{ transition: all 0.5s ease; }`;
+        else styles += `${el.localName}{ transition: all 0.4s ease; }`;
+    });
+
+    sheet.innerHTML = styles;
+    d.head.appendChild(sheet);
 
     d.addEventListener("click", e => {
         if (e.target.matches(btn)) {
-            $darkBtn.classList.toggle("is-active");
-
-            d.querySelector(screen[0]).classList.toggle("dark");
-            d.querySelector(screen[1]).classList.toggle("dark");
-
-            if ($darkBtn.classList.contains("is-active")) {
-                $darkBtn.innerHTML = "☀️";
+            if ($darkBtn.textContent === moon) {
+                $selectors.forEach(el => el.classList.add(classDark));
+                $darkBtn.textContent = sun;
             }
             else {
-                $darkBtn.innerHTML = "🌙";
+                $selectors.forEach(el => el.classList.remove(classDark));
+                $darkBtn.textContent = moon;
             }
-
         }
     })
 }
