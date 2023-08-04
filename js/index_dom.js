@@ -13,8 +13,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     alarm("./assets/hololive_alarm.mp3", "#btn-inciar-a", "#btn-detener-a");
     countdown("countdown", "February 25, 2024", "Feliz cumpleaños.");
     scrollBtn(".scroll-btn");
-    let darkElements = [".main", ".stage"]
-    darkTheme(".dark-btn", darkElements)
+    darkTheme(".dark-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", e => {
