@@ -6,10 +6,10 @@ export default function scrollBtn(btn) {
 
     w.addEventListener("scroll", e => {
         let scrollTop = w.scrollY || d.documentElement.scrollTop;
-        if (scrollTop > 500) {
+        if (scrollTop > 400) {
             $btnScroll.classList.add("is-active");
         }
-        if (scrollTop < 500) {
+        if (scrollTop < 400) {
             $btnScroll.classList.remove("is-active");
         }
     })
