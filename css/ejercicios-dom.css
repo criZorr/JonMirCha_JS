@@ -199,3 +199,10 @@ img {
 .stage.dark-mode{
     background-color: #444;
 }
+
+#seccion5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
