@@ -27,7 +27,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
         `<a href="https://goo.gl/maps/SstqDKiuxbLUzNbb8" target="blank" rel="noopener">Ver Mapa</a>`,
         `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7984812695104!2d-78.49341842477972!3d-0.1806849354175794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59bdc46234671%3A0x32ad006a725a1a58!2sCheems%20Ec%20Heladeria%2C%20Cafeteria%20and%20Fast%20Food!5e0!3m2!1ses-419!2sec!4v1691181958887!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
     );
-    responsiveTester("test-URL", "test-width", "test-height", ".test-open", ".test-close");
+    responsiveTester("responsive-tester");
 });
 
 d.addEventListener("keydown", e => {
