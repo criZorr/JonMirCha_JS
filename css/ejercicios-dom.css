@@ -199,3 +199,22 @@ img {
 .stage.dark-mode{
     background-color: #444;
 }
+
+/* *** Network Status *** */
+
+.online,
+.offline{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #a3f71e;
+    color: var(--second-color);
+}
+
+.offline{
+    background-color: #f7731e;
+}

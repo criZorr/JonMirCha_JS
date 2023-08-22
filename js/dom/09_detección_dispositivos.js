@@ -37,7 +37,7 @@ export default function userDeviceInfo(id) {
         }
     };
 
-    console.log(navigator);
+    // console.log(navigator);
     // console.log(isMobile.android());
     // console.log(isMobile.ios());
     // console.log(isMobile.any());
