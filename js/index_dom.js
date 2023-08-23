@@ -8,6 +8,7 @@ import responsiveMedia from "./dom/07_objeto_responsive.js";
 import responsiveTester from "./dom/08_responsive_tester.js";
 import userDeviceInfo from "./dom/09_detección_dispositivos.js";
 import networkStatus from "./dom/10_detección_de_red.js";
+import webCam from "./dom/11_detección_webcam.js";
 
 const d = document;
 
@@ -22,7 +23,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
         "(min-width: 1024px)",
         `<a href="https://youtu.be/ob4bpZnmF5o" target="blank" rel="noopener">Ver Video</a>`,
         `<iframe width="560" height="315" src="https://www.youtube.com/embed/ob4bpZnmF5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-        );
+    );
     responsiveMedia(
         "gmaps",
         "(min-width: 1024px)",
@@ -31,6 +32,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     );
     responsiveTester("responsive-tester");
     userDeviceInfo("user-device");
+    webCam("webcam");
 });
 
 d.addEventListener("keydown", e => {
