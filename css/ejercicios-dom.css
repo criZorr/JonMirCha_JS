@@ -219,3 +219,35 @@ img {
 .offline{
     background-color: #f7731e;
 }
+
+/* ***** Search Filter ***** */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+
+.card{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+}
+
+.card.dark-mode{
+    background-color: #444;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
