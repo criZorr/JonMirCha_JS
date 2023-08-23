@@ -10,6 +10,7 @@ import userDeviceInfo from "./dom/09_detección_dispositivos.js";
 import networkStatus from "./dom/10_detección_de_red.js";
 import webCam from "./dom/11_detección_webcam.js";
 import getGeolocation from "./dom/12_geolocalizacion.js";
+import searchFilters from "./dom/13_filtro_busquedas.js";
 
 const d = document;
 
@@ -35,12 +36,13 @@ d.addEventListener("DOMContentLoaded", (e) => {
     userDeviceInfo("user-device");
     webCam("webcam");
     getGeolocation("geolocation");
+    searchFilters(".card-filter", ".card");
 });
 
 d.addEventListener("keydown", e => {
     shortcuts(e);
     moveBall(e, ".ball", ".stage");
-})
+});
 
 darkTheme(".dark-btn", "dark-mode");
 networkStatus();
