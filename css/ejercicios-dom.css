@@ -373,3 +373,8 @@ img {
         left: calc(4.25rem + 1vw);
     }
 }
+
+#seccion13{
+    display: flex;
+    flex-direction: column;
+}
