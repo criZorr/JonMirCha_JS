@@ -1,56 +1,56 @@
 {
-    "electro": [
-        {
-            "id":1,
-            "nombre":"Lisa",
-            "region": "Mondstadt"
-        },
-        {
-            "id":2,
-            "nombre":"Beidou",
-            "region": "Liyue"
-        },
-        {
-            "id":3,
-            "nombre":"Kujou Sara",
-            "region": "Inazuma"
-        },
-        {
-            "id":4,
-            "nombre":"Cyno",
-            "region": "Sumeru"
-        },
-        {
-            "id":5,
-            "nombre":"Clorinde",
-            "region": "Fontaine"
-        }
-    ],
-    "arcontes": [
-        {
-            "id": 1,
-            "nombre":"Venti",
-            "elemento": "Anemo"
-        },
-        {
-            "id": 2,
-            "nombre":"Zhongli",
-            "elemento": "Geo"
-        },
-        {
-            "id": 3,
-            "nombre":"Shogun Raiden",
-            "elemento": "Electro"
-        },
-        {
-            "id": 4,
-            "nombre":"Nahida",
-            "elemento": "Dendro"
-        },
-        {
-            "id": 5,
-            "nombre": "Furina",
-            "elemento": "hydro"
-        }
-    ]
+  "electros": [
+    {
+      "id": 1,
+      "nombre": "Lisa",
+      "region": "Mondstadt"
+    },
+    {
+      "id": 2,
+      "nombre": "Beidou",
+      "region": "Liyue"
+    },
+    {
+      "id": 3,
+      "nombre": "Kujou Sara",
+      "region": "Inazuma"
+    },
+    {
+      "id": 4,
+      "nombre": "Cyno",
+      "region": "Sumeru"
+    },
+    {
+      "id": 5,
+      "nombre": "Clorinde",
+      "region": "Fontaine"
+    }
+  ],
+  "arcontes": [
+    {
+      "id": 1,
+      "nombre": "Venti",
+      "elemento": "Anemo"
+    },
+    {
+      "id": 2,
+      "nombre": "Zhongli",
+      "elemento": "Geo"
+    },
+    {
+      "id": 3,
+      "nombre": "Shogun Raiden",
+      "elemento": "Electro"
+    },
+    {
+      "id": 4,
+      "nombre": "Nahida",
+      "elemento": "Dendro"
+    },
+    {
+      "id": 5,
+      "nombre": "Furina",
+      "elemento": "hydro"
+    }
+  ]
 }
