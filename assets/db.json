@@ -39,6 +39,21 @@
       "nombre": "Razor",
       "region": "Mondstadt",
       "id": 9
+    },
+    {
+      "nombre": "Keching",
+      "region": "Liyue",
+      "id": 10
+    },
+    {
+      "nombre": "Yae Miko",
+      "region": "Inazuma",
+      "id": 11
+    },
+    {
+      "nombre": "Shogun Raiden",
+      "region": "Inazuma",
+      "id": 12
     }
   ],
   "arcontes": [
