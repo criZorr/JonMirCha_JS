@@ -24,6 +24,21 @@
       "id": 5,
       "nombre": "Clorinde",
       "region": "Fontaine"
+    },
+    {
+      "nombre": "Kuki Shinobu",
+      "region": "Inazuma",
+      "id": 6
+    },
+    {
+      "nombre": "Dori",
+      "region": "Sumeru",
+      "id": 7
+    },
+    {
+      "nombre": "Razor",
+      "region": "Mondstadt",
+      "id": 9
     }
   ],
   "arcontes": [
