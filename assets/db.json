@@ -1,0 +1,86 @@
+{
+  "electros": [
+    {
+      "id": 1,
+      "nombre": "Lisa",
+      "region": "Mondstadt"
+    },
+    {
+      "id": 2,
+      "nombre": "Beidou",
+      "region": "Liyue"
+    },
+    {
+      "id": 3,
+      "nombre": "Kujou Sara",
+      "region": "Inazuma"
+    },
+    {
+      "id": 4,
+      "nombre": "Cyno",
+      "region": "Sumeru"
+    },
+    {
+      "id": 5,
+      "nombre": "Clorinde",
+      "region": "Fontaine"
+    },
+    {
+      "nombre": "Kuki Shinobu",
+      "region": "Inazuma",
+      "id": 6
+    },
+    {
+      "nombre": "Dori",
+      "region": "Sumeru",
+      "id": 7
+    },
+    {
+      "nombre": "Razor",
+      "region": "Mondstadt",
+      "id": 9
+    },
+    {
+      "nombre": "Keching",
+      "region": "Liyue",
+      "id": 10
+    },
+    {
+      "nombre": "Yae Miko",
+      "region": "Inazuma",
+      "id": 11
+    },
+    {
+      "nombre": "Shogun Raiden",
+      "region": "Inazuma",
+      "id": 12
+    }
+  ],
+  "arcontes": [
+    {
+      "id": 1,
+      "nombre": "Venti",
+      "elemento": "Anemo"
+    },
+    {
+      "id": 2,
+      "nombre": "Zhongli",
+      "elemento": "Geo"
+    },
+    {
+      "id": 3,
+      "nombre": "Shogun Raiden",
+      "elemento": "Electro"
+    },
+    {
+      "id": 4,
+      "nombre": "Nahida",
+      "elemento": "Dendro"
+    },
+    {
+      "id": 5,
+      "nombre": "Furina",
+      "elemento": "hydro"
+    }
+  ]
+}
