@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incluir HTML con AJAX</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 992px;
+        }
+
+        .header {
+            padding: .5rem;
+            background-color: antiquewhite;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 3rem;
+            height: auto;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            font-size: 115%;
+        }
+
+        .menu a {
+            color: chocolate;
+            padding: 0 1vw;
+            transition: all ease-in-out;
+        }
+
+        .menu a:hover {
+            opacity: .75;
+        }
+    </style>
+    <script src="./assets/include-html.js"></script>
+</head>
+
+<body>
+    <div data-include="./assets/header.html"></div>
+    <main class="container"></main>
+    <div data-include="./assets/footer.html"></div>
+    <script>
+        const d = document,
+            $main = d.querySelector("main");
+        const getHTML = options => {
+            let { url, success, error } = options;
+            const xhr = new XMLHttpRequest();
+
+            xhr.addEventListener("readystatechange", e => {
+                if (xhr.readyState !== 4) return;
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    let html = xhr.responseText;
+                    success(html);
+                } else {
+                    let message = xhr.statusText || "Ocurrió un error";
+                    error(`Error ${xhr.status}: ${message}`);
+                }
+            });
+
+            xhr.open("GET", url);
+            xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
+            xhr.send();
+        };
+
+        d.addEventListener("DOMContentLoaded", e => {
+            getHTML({
+                url: "assets/home.html",
+                success: html => $main.innerHTML = html,
+                error: err => $main.innerHTML = `<h1>${err}</h1>`
+            });
+        });
+
+        d.addEventListener("click", e => {
+            if (e.target.matches(".menu a")) {
+                e.preventDefault();
+                getHTML({
+                    url: e.target.href,
+                    success: html => $main.innerHTML = html,
+                    error: err => $main.innerHTML = `<h1>${err}</h1>`
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

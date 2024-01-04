@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selects anidados</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selects anidados</h1>
+    <h2>Ecuador</h2>
+    <label for="select-primary">Provincias</label>
+    <select name="primary" id="select-primary">
+        <option value="">Elige una provincia</option>
+    </select>
+    <p></p>
+    <label for="select-secondary">Cantones</label>
+    <select name="secondary" id="select-secondary">
+        <option value="">Elige un cantón</option>
+    </select>
+    <p></p>
+    <script>
+        const d = document,
+            $selectPrimary = d.getElementById("select-primary"),
+            $selectSecondary = d.getElementById("select-secondary");
+
+        function loadProvinces() {
+            fetch("./assets/provincias.json")
+                .then(res => res.ok ? res.json() : Promise.reject(res))
+                .then(json => {
+                    let $options = `<option value="">Elige una provincia</option>`;
+
+                    for (let i = 1; i < Object.keys(json).length; i++) {
+                        let provincia = json[i].provincia;
+                        $options += `<option value="${provincia}">${provincia}</option>`;
+                    }
+                    $selectPrimary.innerHTML = $options;
+                })
+                .catch(err => {
+                    console.log(err);
+                    let message = err.statusText || "Ocurrió un error";
+                    $selectPrimary.nextElementSibling.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+                });
+        }
+
+        function loadTowns(province, value) {
+            fetch("./assets/provincias.json")
+                .then(res => res.ok ? res.json() : Promise.reject(res))
+                .then(json => {
+                    let $options = `<option value="">Elige un cantón</option>`;
+
+                    console.log(province);
+
+                    let cantones = json[value].cantones,
+                        cantonesLength = Object.keys(cantones).length + 1;
+
+                    for (let ix = (value * 100 + 1); ix < cantonesLength + value * 100; ix++) {
+                        let canton = cantones[ix].canton;
+                        $options += `<option value="${canton}">${canton}</option>`;
+                    }
+
+                    $selectSecondary.innerHTML = $options;
+
+                })
+                .catch(err => {
+                    console.log(err);
+                    let message = err.statusText || "Ocurrió un error";
+                    $selectSecondary.nextElementSibling.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+                });
+        }
+
+        d.addEventListener("DOMContentLoaded", loadProvinces);
+
+        $selectPrimary.addEventListener("change", e => loadTowns(e.target.value, e.target.selectedIndex))
+    </script>
+</body>
+
+</html>
