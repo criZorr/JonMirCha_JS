@@ -47,14 +47,6 @@ img {
   text-align: center;
 }
 
-.form-search input {
-  display: block;
-  margin: auto;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-}
-
 .header {
   padding: 0.5rem;
   position: sticky;
@@ -91,4 +83,12 @@ img {
 .post-card p {
   display: flex;
   justify-content: space-between;
+}
+
+.search-form input {
+  display: block;
+  margin: auto;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
 }
