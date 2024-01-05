@@ -5,10 +5,10 @@ export function PostCard(props) {
       ? _embedded["wp:featuredmedia"][0].source_url
       : "./app/assets/favicon.png";
 
-  document.addEventListener("click", (e) => {
-    if (!e.target.matches(".post-card a")) return false;
-    localStorage.setItem("wpPostId", e.target.dataset.id);
-  });
+  //   document.addEventListener("click", (e) => {
+  //     if (!e.target.matches(".post-card a")) return false;
+  //     localStorage.setItem("wpPostId", e.target.dataset.id);
+  //   });
 
   return `
         <article class="post-card">
