@@ -1,5 +1,6 @@
 import { ajax } from "../helpers/ajax.js";
 import api from "../helpers/wp_api.js";
+import { Post } from "./Post.js";
 import { PostCard } from "./PostCard.js";
 
 export async function Router() {
@@ -17,7 +18,6 @@ export async function Router() {
       cbSuccess: (posts) => {
         let html = "";
         posts.forEach((post) => (html += PostCard(post)));
-        d.querySelector(".loader").style.display = "none";
         $main.innerHTML = html;
       },
     });
@@ -26,6 +26,13 @@ export async function Router() {
   } else if (hash === "#/contacto") {
     $main.innerHTML = "<h2>Sección del Contacto</h2>";
   } else {
-    $main.innerHTML = "<h2>Aquí cargará el contenido del post</h2>";
+    await ajax({
+      // url: `${api.POST}/${localStorage.getItem("wpPostId")}`,
+      url: api.POSTSLUG + hash.replace("#/", ""),
+      cbSuccess: (post) => {
+        $main.innerHTML = Post(post[0]);
+      },
+    });
   }
+  d.querySelector(".loader").style.display = "none";
 }

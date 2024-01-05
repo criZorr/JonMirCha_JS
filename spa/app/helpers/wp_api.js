@@ -7,7 +7,8 @@ const NAME = "malvestida",
   POSTS = `${API_WP}/posts?_embed`,
   POST = `${API_WP}/posts`,
   CATEGORIES = `${API_WP}/categories`,
-  SEARCH = `${API_WP}/search?_embed&search=`;
+  SEARCH = `${API_WP}/search?_embed&search=`,
+  POSTSLUG = `${API_WP}/posts?slug=`;
 
 export default {
   NAME,
@@ -18,4 +19,5 @@ export default {
   POST,
   CATEGORIES,
   SEARCH,
+  POSTSLUG,
 };
