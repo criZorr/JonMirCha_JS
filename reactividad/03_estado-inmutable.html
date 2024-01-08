@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado inmutable</title>
+</head>
+
+<body>
+    <h1>Estado inmutable</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-item" placeholder="Tarea por hacer">
+        <input type="submit" value="Agregar">
+    </form>
+    <h2>Lista de Tareas</h2>
+    <ul id="todo-list"></ul>
+    <script>
+        const d = document;
+
+        const state = {
+            todoList: [],
+            nombre: ""
+        }
+
+        const template = () => {
+            if (state.todoList.length < 1) return `<p><em>Lista sin tareas por hacer.</em></p>`;
+
+            let todos = state.todoList.map(item => `<li>${item}</li>`).join("");
+
+            return todos;
+        };
+
+        const render = () => {
+            console.log(state);
+            const $list = d.getElementById("todo-list");
+            if (!$list) return;
+            $list.innerHTML = template();
+        };
+
+        //Actualizar el State de forma reactiva
+        const setState = obj => {
+            for (let key in obj) {
+                if (state.hasOwnProperty(key)) {
+                    state[key] = obj[key];
+                }
+            }
+
+            render();
+        };
+
+        //copia del State
+
+        const getState = () => JSON.parse(JSON.stringify(state));
+
+        d.addEventListener("DOMContentLoaded", render);
+
+        setState({
+            todoList: ["Tarea 1", "Tarea 2", "Tarea 3"],
+            nombre: "criZorr"
+        });
+
+        const items = getState();
+        items.todoList.push("aBer");
+
+        d.addEventListener("submit", e => {
+            if (!e.target.matches("#todo-form")) return false;
+            e.preventDefault();
+
+            const $item = d.getElementById("todo-item");
+
+            if (!$item) return;
+
+            //Actualizar State de forma reactiva
+            const lastState = getState();
+            lastState.todoList.push($item.value);
+            setState({ todoList: lastState.todoList });
+
+            $item.value = "";
+            $item.focus();
+        })
+    </script>
+</body>
+
+</html>
