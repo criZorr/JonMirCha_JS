@@ -18,7 +18,7 @@ En lo personal, es el mejor curso de JavaScript que conozco, lo recomiendo total
 
 3. Repositorio GitHub:
 
-[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="drawing" width="150"/>](https://www.youtube.com/playlist?list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg" alt="drawing" width="150"/>](https://github.com/jonmircha/youtube-js)
 
 ## Eso es todo, un saludo.
 
